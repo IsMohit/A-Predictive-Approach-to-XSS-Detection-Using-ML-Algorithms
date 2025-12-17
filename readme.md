@@ -26,8 +26,7 @@ An intelligent Cross-Site Scripting (XSS) detection and prevention system powere
 - [Model Performance](#model-performance)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
-- [Roadmap](#roadmap)
-- [License](#license)
+
 
 ## 🎯 Overview
 
