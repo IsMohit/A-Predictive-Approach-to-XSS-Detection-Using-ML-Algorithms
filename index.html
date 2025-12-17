@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Detection System - Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .shield-icon {
+            font-size: 1.2em;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .input-section {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1em;
+            font-family: 'Courier New', monospace;
+            resize: vertical;
+            min-height: 120px;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            flex: 1;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .check-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .check-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .clear-btn {
+            background: #f0f0f0;
+            color: #666;
+        }
+
+        .clear-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .result {
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result.safe {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+        }
+
+        .result.malicious {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            color: #721c24;
+        }
+
+        .result-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .result-details {
+            font-size: 1em;
+            line-height: 1.8;
+        }
+
+        .confidence-bar {
+            background: rgba(0, 0, 0, 0.1);
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .confidence-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .safe .confidence-fill {
+            background: #28a745;
+        }
+
+        .malicious .confidence-fill {
+            background: #dc3545;
+        }
+
+        .sanitized-section {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+
+        .sanitized-section h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .sanitized-content {
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+            color: #555;
+        }
+
+        .loading {
+            text-align: center;
+            display: none;
+            padding: 20px;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .examples {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .examples h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .example-btn {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px 15px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .example-btn:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .error {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><span class="shield-icon">🛡️</span>XSS Detection System</h1>
+            <p>Real-time Machine Learning-based Cross-Site Scripting Detection</p>
+        </div>
+
+        <div class="error" id="errorMsg"></div>
+
+        <div class="input-section">
+            <label for="userInput">Enter text to check:</label>
+            <textarea 
+                id="userInput" 
+                placeholder="Type or paste your input here... (e.g., comments, form data, URLs)"
+            ></textarea>
+        </div>
+
+        <div class="button-group">
+            <button type="button" class="check-btn" onclick="checkInput(event); return false;">🔍 Check for XSS</button>
+            <button type="button" class="clear-btn" onclick="clearAll(); return false;">🗑️ Clear</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Analyzing input...</p>
+        </div>
+
+        <div class="result" id="result"></div>
+
+        <div class="examples">
+            <h3>📝 Try These Examples:</h3>
+            <button type="button" class="example-btn" onclick="setExample('Hello, this is a normal comment!'); return false;">Safe Comment</button>
+            <button type="button" class="example-btn" onclick="setExample('<script>alert(1)</script>'); return false;">Basic XSS</button>
+            <button type="button" class="example-btn" onclick="setExample('<img src=x onerror=alert(1)>'); return false;">Image XSS</button>
+            <button type="button" class="example-btn" onclick="setExample('<svg onload=alert(1)>'); return false;">SVG XSS</button>
+            <button type="button" class="example-btn" onclick="setExample('javascript:alert(document.cookie)'); return false;">JavaScript Protocol</button>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:5000/check';
+
+        async function checkInput(event) {
+            // Prevent form submission if this was triggered by a form
+            if (event) {
+                event.preventDefault();
+            }
+
+            const input = document.getElementById('userInput').value;
+            const resultDiv = document.getElementById('result');
+            const loadingDiv = document.getElementById('loading');
+            const errorDiv = document.getElementById('errorMsg');
+
+            // Validate input
+            if (!input.trim()) {
+                showError('Please enter some text to check!');
+                return false;
+            }
+
+            // Hide previous results
+            resultDiv.style.display = 'none';
+            errorDiv.style.display = 'none';
+            loadingDiv.style.display = 'block';
+
+            try {
+                console.log('Sending request to API...');
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ input: input })
+                });
+
+                console.log('Response status:', response.status);
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(`Server error: ${response.status} - ${errorData.error || 'Unknown error'}`);
+                }
+
+                const data = await response.json();
+                console.log('Response data:', data);
+                displayResult(data);
+            } catch (error) {
+                console.error('Error:', error);
+                showError('Could not connect to API. Make sure the Flask server is running on localhost:5000. Error: ' + error.message);
+            } finally {
+                loadingDiv.style.display = 'none';
+            }
+
+            // Prevent any default behavior
+            return false;
+        }
+
+        function displayResult(data) {
+            const resultDiv = document.getElementById('result');
+            const isMalicious = data.prediction === 'malicious';
+            
+            // Clear and reset
+            resultDiv.innerHTML = '';
+            resultDiv.className = 'result ' + (isMalicious ? 'malicious' : 'safe');
+            
+            const icon = isMalicious ? '⚠️' : '✅';
+            const statusText = isMalicious ? 'MALICIOUS INPUT DETECTED!' : 'Input is Safe';
+            
+            // Create header
+            const headerDiv = document.createElement('div');
+            headerDiv.className = 'result-header';
+            headerDiv.innerHTML = `<span>${icon}</span><span>${statusText}</span>`;
+            
+            // Create details
+            const detailsDiv = document.createElement('div');
+            detailsDiv.className = 'result-details';
+            
+            // Add all details
+            const detailsHTML = `
+                <p><strong>Prediction:</strong> ${escapeHtml(String(data.prediction).toUpperCase())}</p>
+                <p><strong>Confidence:</strong> ${escapeHtml(String(data.confidence))}%</p>
+                <div class="confidence-bar">
+                    <div class="confidence-fill" style="width: ${data.confidence}%"></div>
+                </div>
+                <p><strong>Safe Probability:</strong> ${escapeHtml(String(data.probabilities.safe))}%</p>
+                <p><strong>Malicious Probability:</strong> ${escapeHtml(String(data.probabilities.malicious))}%</p>
+                ${isMalicious && data.warning ? `<p><strong>⚠️ Warning:</strong> ${escapeHtml(data.warning)}</p>` : ''}
+                ${isMalicious && data.risk_level ? `<p><strong>Risk Level:</strong> ${escapeHtml(String(data.risk_level).toUpperCase())}</p>` : ''}
+            `;
+            
+            detailsDiv.innerHTML = detailsHTML;
+            
+            // Create sanitized section with textContent (safe)
+            const sanitizedSection = document.createElement('div');
+            sanitizedSection.className = 'sanitized-section';
+            
+            const sanitizedTitle = document.createElement('h4');
+            sanitizedTitle.textContent = '🧹 Sanitized Output:';
+            
+            const sanitizedContent = document.createElement('div');
+            sanitizedContent.className = 'sanitized-content';
+            // Use textContent to prevent any script execution
+            sanitizedContent.textContent = data.sanitized || '(empty - all content removed)';
+            
+            sanitizedSection.appendChild(sanitizedTitle);
+            sanitizedSection.appendChild(sanitizedContent);
+            detailsDiv.appendChild(sanitizedSection);
+            
+            // Append to result
+            resultDiv.appendChild(headerDiv);
+            resultDiv.appendChild(detailsDiv);
+            
+            // Force display and prevent any hiding
+            resultDiv.style.display = 'block';
+            resultDiv.style.visibility = 'visible';
+            resultDiv.style.opacity = '1';
+            
+            console.log('Result displayed successfully');
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMsg');
+            errorDiv.textContent = '❌ ' + message;
+            errorDiv.style.display = 'block';
+        }
+
+        function clearAll() {
+            document.getElementById('userInput').value = '';
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('errorMsg').style.display = 'none';
+        }
+
+        function setExample(text) {
+            document.getElementById('userInput').value = text;
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('errorMsg').style.display = 'none';
+        }
+
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return String(text).replace(/[&<>"']/g, m => map[m]);
+        }
+
+        // Prevent form submission on Enter key
+        document.addEventListener('DOMContentLoaded', function() {
+            const textarea = document.getElementById('userInput');
+            textarea.addEventListener('keydown', function(e) {
+                if (e.ctrlKey && e.key === 'Enter') {
+                    e.preventDefault();
+                    checkInput(e);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
