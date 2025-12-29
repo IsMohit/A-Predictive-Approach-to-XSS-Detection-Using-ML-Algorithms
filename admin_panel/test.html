@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>XSS Detection - Test Input</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1f2937;
+            --secondary: #374151;
+            --accent: #3b82f6;
+            --accent-dark: #1e40af;
+            --bg-light: #f9fafb;
+            --border: #e5e7eb;
+            --text-dark: #111827;
+            --text-light: #6b7280;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header Section */
+        .header-section {
+            margin-bottom: 2rem;
+        }
+
+        .header-section h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-section p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* Form Card */
+        .form-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        textarea,
+        input,
+        select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            color: var(--text-dark);
+            background: white;
+        }
+
+        select {
+            font-family: 'Segoe UI', sans-serif;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2em;
+            padding-right: 2.5rem;
+        }
+
+        textarea:focus,
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        /* Button Group */
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        button {
+            flex: 1;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--bg-light);
+            color: var(--text-dark);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover:not(:disabled) {
+            background: white;
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Result Cards */
+        .result-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .result-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .result-card.safe {
+            border-left-color: var(--success);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .result-card.malicious {
+            border-left-color: var(--danger);
+            background: rgba(239, 68, 68, 0.05);
+        }
+
+        .result-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-card.safe .result-value {
+            color: var(--success);
+        }
+
+        .result-card.malicious .result-value {
+            color: var(--danger);
+        }
+
+        .result-detail {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Messages */
+        .error-message,
+        .success-message,
+        .warning-message {
+            display: none;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            animation: slideIn 0.3s ease;
+        }
+
+        .error-message {
+            background: #fee2e2;
+            color: #991b1b;
+            border-left: 4px solid var(--danger);
+        }
+
+        .success-message {
+            background: #dcfce7;
+            color: #166534;
+            border-left: 4px solid var(--success);
+        }
+
+        .warning-message {
+            background: #fef3c7;
+            color: #92400e;
+            border-left: 4px solid var(--warning);
+        }
+
+        .error-message.show,
+        .success-message.show,
+        .warning-message.show {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-10px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Details Section */
+        .details-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+            display: none;
+        }
+
+        .details-section.show {
+            display: block;
+        }
+
+        .details-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .detail-item {
+            padding: 0.75rem;
+            background: var(--bg-light);
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            word-break: break-all;
+            color: var(--text-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .header-section h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .result-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span>🛡️</span>
+                <span>XSS Detection</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Analytics</a></li>
+                <li><a href="test.html" class="active">Test Input</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header-section">
+            <h1>Test XSS Detection</h1>
+            <p>Enter text to check if it contains XSS payloads</p>
+        </div>
+
+        <!-- Messages -->
+        <div class="error-message" id="errorMessage"></div>
+        <div class="success-message" id="successMessage"></div>
+        <div class="warning-message" id="warningMessage"></div>
+
+        <!-- Form Card -->
+        <div class="form-card">
+            <div class="form-group">
+                <label for="input">Input Text</label>
+                <textarea id="input" placeholder="Enter text to analyze for XSS vulnerabilities..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="examples">📚 Quick Examples</label>
+                <select id="examples" onchange="loadExample()">
+                    <option value="">-- Select an example --</option>
+                    <optgroup label="🔴 Basic XSS Attacks">
+                        <option value="basic-1" data-payload="<script>alert('XSS')</script>">Script Tag Injection</option>
+                        <option value="basic-2" data-payload="<img src=x onerror=\"alert('XSS')\">">Image onerror Event</option>
+                        <option value="basic-3" data-payload="<svg onload=\"alert('XSS')\">">SVG onload Event</option>
+                        <option value="basic-4" data-payload="<iframe src=\"javascript:alert('XSS')\">">iFrame JavaScript URL</option>
+                        <option value="basic-5" data-payload="<body onload=\"alert('XSS')\">">Body onload Event</option>
+                    </optgroup>
+                    <optgroup label="🟠 Event Handler Injections">
+                        <option value="event-1" data-payload="<div onclick=\"alert('XSS')\">Click me</div>">Div onclick Handler</option>
+                        <option value="event-2" data-payload="<input onfocus=\"alert('XSS')\">">Input onfocus Handler</option>
+                        <option value="event-3" data-payload="<textarea onmouseover=\"alert('XSS')\"></textarea>">Textarea onmouseover</option>
+                        <option value="event-4" data-payload="<form onsubmit=\"alert('XSS')\"></form>">Form onsubmit Handler</option>
+                        <option value="event-5" data-payload="<video onplay=\"alert('XSS')\"></video>">Video onplay Handler</option>
+                    </optgroup>
+                    <optgroup label="🟡 Obfuscated XSS">
+                        <option value="obf-1" data-payload="<script>eval(String.fromCharCode(97,108,101,114,116))</script>">String.fromCharCode Obfuscation</option>
+                        <option value="obf-2" data-payload="<img src=x onerror=\"eval(atob('YWxlcnQoJ1hTUycpOw=='))\">">Base64 Obfuscation</option>
+                        <option value="obf-3" data-payload="<svg/onload=\"fetch('javascript:alert(1)')\">">SVG Fetch Injection</option>
+                        <option value="obf-4" data-payload="<img src=1 onerror=\"javascript:alert(1)\">">Image Number Source</option>
+                        <option value="obf-5" data-payload="<svg><script>alert`XSS`</script></svg>">Template Literal Attack</option>
+                    </optgroup>
+                    <optgroup label="🟢 DOM-Based XSS">
+                        <option value="dom-1" data-payload="javascript:alert('XSS')">JavaScript Protocol URL</option>
+                        <option value="dom-2" data-payload="data:text/html,<script>alert('XSS')</script>">Data URL with Script</option>
+                        <option value="dom-3" data-payload="vbscript:msgbox('XSS')">VBScript Protocol</option>
+                        <option value="dom-4" data-payload="jAvAsCrIpT:alert('XSS')">Case Variation Attack</option>
+                        <option value="dom-5" data-payload="onfocus=alert('XSS') autofocus">Autofocus Event</option>
+                    </optgroup>
+                    <optgroup label="🔵 Advanced Payloads">
+                        <option value="adv-1" data-payload="<style>@import'http://attacker.com/xss.css'</style>">CSS Import Attack</option>
+                        <option value="adv-2" data-payload="<meta http-equiv=\"refresh\" content=\"0;url=javascript:alert('XSS')\">">Meta Refresh Injection</option>
+                        <option value="adv-3" data-payload="<link rel=\"stylesheet\" href=\"javascript:alert('XSS')\">">Link Stylesheet Attack</option>
+                        <option value="adv-4" data-payload="<object data=\"javascript:alert('XSS')\"></object>">Object Data Injection</option>
+                        <option value="adv-5" data-payload="<embed src=\"javascript:alert('XSS')\">">Embed Tag Injection</option>
+                    </optgroup>
+                    <optgroup label="✅ Safe Examples">
+                        <option value="safe-1" data-payload="Hello World">Hello World</option>
+                        <option value="safe-2" data-payload="This is a normal text input for testing.">Normal Text Input</option>
+                        <option value="safe-3" data-payload="User profile with name: John Doe">User Profile</option>
+                        <option value="safe-4" data-payload="Welcome to our website, please login.">Welcome Message</option>
+                        <option value="safe-5" data-payload="This is a comment: Great article, very informative!">User Comment</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-primary" onclick="analyzeInput()" id="analyzeBtn">
+                    <span id="btnText">🔍 Analyze</span>
+                </button>
+                <button class="btn-secondary" onclick="clearInput()">Clear</button>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="resultsContainer"></div>
+
+        <!-- Details -->
+        <div class="details-section" id="detailsSection">
+            <div class="details-title">📋 Analysis Details</div>
+            <div id="detailsContent"></div>
+        </div>
+    </div>
+
+    <script>
+        function loadExample() {
+            const select = document.getElementById('examples');
+            const exampleKey = select.value;
+            const inputField = document.getElementById('input');
+
+            if (exampleKey) {
+                const selectedOption = select.options[select.selectedIndex];
+                const payload = selectedOption.getAttribute('data-payload');
+                
+                if (payload) {
+                    console.log('Loaded example:', exampleKey, 'Payload:', payload);
+                    inputField.value = payload;
+                    inputField.focus();
+                }
+                
+                setTimeout(() => {
+                    select.value = '';
+                }, 100);
+            }
+        }
+
+        async function analyzeInput() {
+            const input = document.getElementById('input').value.trim();
+
+            if (!input) {
+                showWarning('Please enter some text to analyze');
+                return;
+            }
+
+            const btn = document.getElementById('analyzeBtn');
+            const btnText = document.getElementById('btnText');
+            btn.disabled = true;
+            btnText.textContent = '⏳ Analyzing...';
+
+            try {
+                const response = await fetch('http://localhost:5000/check', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ input: input })
+                }).catch(() => null);
+
+                if (response && response.ok) {
+                    const data = await response.json();
+                    displayResults(data, input);
+                } else {
+                    showWarning('API not available. Using demo mode.');
+                    displayDemoResults(input);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                displayDemoResults(input);
+            } finally {
+                btn.disabled = false;
+                btnText.textContent = '🔍 Analyze';
+            }
+        }
+
+        function displayResults(data, input) {
+            const isMalicious = data.prediction === 'malicious';
+            const confidence = Math.round((data.confidence || 0) * 100) / 100;
+
+            const html = `
+                <div class="result-cards">
+                    <div class="result-card ${isMalicious ? 'malicious' : 'safe'}">
+                        <div class="result-label">Prediction</div>
+                        <div class="result-value">${isMalicious ? '⚠️ Malicious' : '✅ Safe'}</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Confidence</div>
+                        <div class="result-value">${confidence}%</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Sanitized</div>
+                        <div class="result-value">${data.sanitized ? '✓' : '✗'}</div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('resultsContainer').innerHTML = html;
+
+            const details = `
+                <div class="detail-item"><strong>Original:</strong> ${escapeHtml(input)}</div>
+                <div class="detail-item"><strong>Sanitized:</strong> ${escapeHtml(data.sanitized || 'N/A')}</div>
+                <div class="detail-item"><strong>Status:</strong> ${data.status || 'complete'}</div>
+            `;
+
+            document.getElementById('detailsContent').innerHTML = details;
+            document.getElementById('detailsSection').classList.add('show');
+
+            if (isMalicious) {
+                showError(`⚠️ Malicious input detected with ${confidence}% confidence!`);
+            } else {
+                showSuccess(`✅ Input is safe (${confidence}% confidence)`);
+            }
+        }
+
+        function displayDemoResults(input) {
+            const xssPatterns = [
+                '<script',
+                'javascript:',
+                'onerror=',
+                'onload=',
+                'onclick=',
+                '<iframe',
+                '<img',
+                'svg',
+                'eval(',
+                'alert(',
+                '<body'
+            ];
+
+            const isMalicious = xssPatterns.some(pattern => input.toLowerCase().includes(pattern));
+            const confidence = isMalicious ? 85 : 95;
+
+            const html = `
+                <div class="result-cards">
+                    <div class="result-card ${isMalicious ? 'malicious' : 'safe'}">
+                        <div class="result-label">Prediction</div>
+                        <div class="result-value">${isMalicious ? '⚠️ Malicious' : '✅ Safe'}</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Confidence</div>
+                        <div class="result-value">${confidence}%</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Mode</div>
+                        <div class="result-value">Demo</div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('resultsContainer').innerHTML = html;
+
+            const details = `
+                <div class="detail-item"><strong>Original:</strong> ${escapeHtml(input)}</div>
+                <div class="detail-item"><strong>Mode:</strong> Demo (API not available)</div>
+                <div class="detail-item"><strong>Note:</strong> For real analysis, start the API server</div>
+            `;
+
+            document.getElementById('detailsContent').innerHTML = details;
+            document.getElementById('detailsSection').classList.add('show');
+
+            if (isMalicious) {
+                showError(`⚠️ Potential XSS detected (Demo mode)`);
+            } else {
+                showSuccess(`✅ Input appears safe (Demo mode)`);
+            }
+        }
+
+        function clearInput() {
+            document.getElementById('input').value = '';
+            document.getElementById('resultsContainer').innerHTML = '';
+            document.getElementById('detailsSection').classList.remove('show');
+            document.getElementById('input').focus();
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+            setTimeout(() => errorDiv.classList.remove('show'), 5000);
+        }
+
+        function showSuccess(message) {
+            const successDiv = document.getElementById('successMessage');
+            successDiv.textContent = message;
+            successDiv.classList.add('show');
+            setTimeout(() => successDiv.classList.remove('show'), 5000);
+        }
+
+        function showWarning(message) {
+            const warningDiv = document.getElementById('warningMessage');
+            warningDiv.textContent = message;
+            warningDiv.classList.add('show');
+            setTimeout(() => warningDiv.classList.remove('show'), 4000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputField = document.getElementById('input');
+            if (inputField) {
+                inputField.focus();
+            }
+        });
+    </script>
+</body>
+</html>

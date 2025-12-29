@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>XSS Detection - Analytics Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1f2937;
+            --secondary: #374151;
+            --accent: #3b82f6;
+            --accent-dark: #1e40af;
+            --bg-light: #f9fafb;
+            --border: #e5e7eb;
+            --text-dark: #111827;
+            --text-light: #6b7280;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header Section */
+        .header-section {
+            margin-bottom: 2rem;
+        }
+
+        .header-section h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-section p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-unit {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .metric-card.success { border-left-color: var(--success); }
+        .metric-card.danger { border-left-color: var(--danger); }
+        .metric-card.warning { border-left-color: var(--warning); }
+
+        /* Charts Section */
+        .charts-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Tabs */
+        .test-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            padding: 0.75rem 1.5rem;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--text-light);
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: var(--accent);
+        }
+
+        .tab-btn.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* Charts Grid */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 350px;
+        }
+
+        /* Confusion Matrix */
+        .confusion-matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .confusion-matrix-table th,
+        .confusion-matrix-table td {
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .confusion-matrix-table th {
+            background: var(--bg-light);
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .confusion-matrix-table td {
+            background: white;
+        }
+
+        /* Messages */
+        .error-message,
+        .success-message {
+            display: none;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            animation: slideIn 0.3s ease;
+        }
+
+        .error-message {
+            background: #fee2e2;
+            color: #991b1b;
+            border-left: 4px solid var(--danger);
+        }
+
+        .success-message {
+            background: #dcfce7;
+            color: #166534;
+            border-left: 4px solid var(--success);
+        }
+
+        .error-message.show,
+        .success-message.show {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-10px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-section h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span>🛡️</span>
+                <span>XSS Detection</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Analytics</a></li>
+                <li><a href="test.html">Test Input</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header-section">
+            <h1>Analytics Dashboard</h1>
+            <p>Real-time CNN-LSTM model performance metrics</p>
+        </div>
+
+        <!-- Messages -->
+        <div class="error-message" id="errorMessage"></div>
+        <div class="success-message" id="successMessage"></div>
+
+        <!-- Metrics Grid -->
+        <div class="metrics-grid" id="metricsGrid"></div>
+
+        <!-- Charts Section -->
+        <div class="charts-section">
+            <h2 class="section-title">📊 Performance Analysis</h2>
+
+            <!-- Test Tabs -->
+            <div class="test-tabs" id="testTabs"></div>
+
+            <!-- Charts Grid -->
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <canvas id="metricsChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="rocChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Confusion Matrix -->
+            <div style="margin-top: 2rem;">
+                <h3 style="color: var(--primary); margin-bottom: 1rem; font-weight: 600;">Confusion Matrix</h3>
+                <table class="confusion-matrix-table" id="confusionMatrixTable"></table>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Last updated: <span id="lastUpdated">Never</span></p>
+            <p>CNN-LSTM XSS Detection System v1.0</p>
+        </div>
+    </div>
+
+    <script>
+        let metricsChart = null;
+        let rocChart = null;
+        let currentTestIndex = 0;
+        let currentResults = null;
+
+        // Load test results from JSON file
+        async function loadResultsFromFile() {
+            try {
+                // Try multiple paths
+                const paths = [
+                    '../test_results.json',
+                    '/test_results.json',
+                    './test_results.json'
+                ];
+
+                for (let path of paths) {
+                    try {
+                        const response = await fetch(path);
+                        if (response.ok) {
+                            const data = await response.json();
+                            console.log('Loaded test results from:', path);
+                            return data;
+                        }
+                    } catch (e) {
+                        console.log('Failed to load from:', path);
+                        continue;
+                    }
+                }
+
+                throw new Error('Could not load test_results.json from any path');
+            } catch (error) {
+                console.error('Error loading test_results.json:', error);
+                showError('Failed to load test results - file not found');
+                return null;
+            }
+        }
+
+        async function refreshResults() {
+            try {
+                let results = await loadResultsFromFile();
+
+                if (results && results.test_results) {
+                    currentResults = results;
+                    updateDashboard();
+                    document.getElementById('lastUpdated').textContent = new Date(results.timestamp).toLocaleString();
+                    showSuccess('Results loaded successfully');
+                } else {
+                    showError('No test results available');
+                }
+            } catch (error) {
+                console.error('Error loading results:', error);
+                showError('Error loading results');
+            }
+        }
+
+        function updateDashboard() {
+            if (!currentResults || !currentResults.test_results) {
+                return;
+            }
+
+            createTestTabs();
+            updateMetrics(currentTestIndex);
+            updateCharts(currentTestIndex);
+        }
+
+        function createTestTabs() {
+            const tabsContainer = document.getElementById('testTabs');
+            tabsContainer.innerHTML = '';
+
+            currentResults.test_results.forEach((test, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'tab-btn' + (index === 0 ? ' active' : '');
+                btn.textContent = test.test_name;
+                btn.onclick = () => selectTest(index);
+                tabsContainer.appendChild(btn);
+            });
+        }
+
+        function selectTest(index) {
+            currentTestIndex = index;
+
+            document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
+
+            updateMetrics(index);
+            updateCharts(index);
+        }
+
+        function updateMetrics(testIndex) {
+            const test = currentResults.test_results[testIndex];
+            const metrics = test.metrics;
+
+            const metricsHTML = `
+                <div class="metric-card">
+                    <div class="metric-label">Accuracy</div>
+                    <div class="metric-value">${(metrics.accuracy * 100).toFixed(2)}%</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Precision</div>
+                    <div class="metric-value">${(metrics.precision * 100).toFixed(2)}%</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Recall</div>
+                    <div class="metric-value">${(metrics.recall * 100).toFixed(2)}%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">F1-Score</div>
+                    <div class="metric-value">${metrics.f1_score.toFixed(4)}</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">ROC-AUC</div>
+                    <div class="metric-value">${metrics.roc_auc.toFixed(4)}</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Sensitivity</div>
+                    <div class="metric-value">${(metrics.sensitivity * 100).toFixed(2)}%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Specificity</div>
+                    <div class="metric-value">${(metrics.specificity * 100).toFixed(2)}%</div>
+                </div>
+            `;
+
+            document.getElementById('metricsGrid').innerHTML = metricsHTML;
+
+            // Confusion Matrix
+            const cm = metrics.confusion_matrix;
+            const confusionMatrixHTML = `
+                <tr>
+                    <th>Metric</th>
+                    <th>Predicted Negative</th>
+                    <th>Predicted Positive</th>
+                </tr>
+                <tr>
+                    <th>Actually Negative</th>
+                    <td>${cm[0][0]}</td>
+                    <td>${cm[0][1]}</td>
+                </tr>
+                <tr>
+                    <th>Actually Positive</th>
+                    <td>${cm[1][0]}</td>
+                    <td>${cm[1][1]}</td>
+                </tr>
+            `;
+
+            document.getElementById('confusionMatrixTable').innerHTML = confusionMatrixHTML;
+        }
+
+        function updateCharts(testIndex) {
+            const test = currentResults.test_results[testIndex];
+            const metrics = test.metrics;
+
+            // Radar Chart
+            const metricsCtx = document.getElementById('metricsChart').getContext('2d');
+            if (metricsChart) metricsChart.destroy();
+
+            metricsChart = new Chart(metricsCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Accuracy', 'Precision', 'Recall', 'Sensitivity', 'Specificity', 'ROC-AUC'],
+                    datasets: [{
+                        label: test.test_name,
+                        data: [
+                            metrics.accuracy,
+                            metrics.precision,
+                            metrics.recall,
+                            metrics.sensitivity,
+                            metrics.specificity,
+                            metrics.roc_auc
+                        ],
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        borderWidth: 2,
+                        pointRadius: 5,
+                        pointBackgroundColor: '#3b82f6',
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 1,
+                            ticks: {
+                                callback: function(value) {
+                                    return (value * 100).toFixed(0) + '%';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'top' }
+                    }
+                }
+            });
+
+            // Confusion Matrix Bar Chart
+            const rocCtx = document.getElementById('rocChart').getContext('2d');
+            if (rocChart) rocChart.destroy();
+
+            rocChart = new Chart(rocCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['True Positives', 'True Negatives', 'False Positives', 'False Negatives'],
+                    datasets: [{
+                        label: 'Count',
+                        data: [metrics.tp, metrics.tn, metrics.fp, metrics.fn],
+                        backgroundColor: [
+                            '#10b981',
+                            '#10b98155',
+                            '#ef4444',
+                            '#ef444455'
+                        ],
+                        borderColor: [
+                            '#10b981',
+                            '#10b981',
+                            '#ef4444',
+                            '#ef4444'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: { legend: { display: false } },
+                    scales: { x: { beginAtZero: true } }
+                }
+            });
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = '❌ ' + message;
+            errorDiv.classList.add('show');
+            setTimeout(() => errorDiv.classList.remove('show'), 5000);
+        }
+
+        function showSuccess(message) {
+            const successDiv = document.getElementById('successMessage');
+            successDiv.textContent = '✅ ' + message;
+            successDiv.classList.add('show');
+            setTimeout(() => successDiv.classList.remove('show'), 3000);
+        }
+
+        // Load on page load
+        document.addEventListener('DOMContentLoaded', refreshResults);
+    </script>
+</body>
+</html>

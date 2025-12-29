@@ -1,9 +1,3 @@
-# app_cnn_lstm.py
-"""
-Flask REST API for CNN-LSTM XSS Detection
-Provides real-time XSS detection using deep learning
-"""
-
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pickle

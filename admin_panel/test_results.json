@@ -1,0 +1,62 @@
+{
+  "timestamp": "2025-12-30T02:36:51.532839",
+  "model_info": {
+    "model_path": "xss_cnn_lstm_model.h5",
+    "max_length": 300,
+    "vocab_size": 5000
+  },
+  "test_results": [
+    {
+      "test_name": "Tough Test Data",
+      "metrics": {
+        "accuracy": 0.9594594594594594,
+        "precision": 0.9285714285714286,
+        "recall": 1.0,
+        "f1_score": 0.9629629629629629,
+        "roc_auc": 0.9948717948717949,
+        "sensitivity": 1.0,
+        "specificity": 0.9142857142857143,
+        "confusion_matrix": [
+          [
+            32,
+            3
+          ],
+          [
+            0,
+            39
+          ]
+        ],
+        "tp": 39,
+        "tn": 32,
+        "fp": 3,
+        "fn": 0
+      }
+    },
+    {
+      "test_name": "Dataset Samples",
+      "metrics": {
+        "accuracy": 0.998,
+        "precision": 0.9960159362549801,
+        "recall": 1.0,
+        "f1_score": 0.998003992015968,
+        "roc_auc": 0.999068,
+        "sensitivity": 1.0,
+        "specificity": 0.996,
+        "confusion_matrix": [
+          [
+            498,
+            2
+          ],
+          [
+            0,
+            500
+          ]
+        ],
+        "tp": 500,
+        "tn": 498,
+        "fp": 2,
+        "fn": 0
+      }
+    }
+  ]
+}
