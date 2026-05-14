@@ -510,9 +510,9 @@
             btnText.textContent = '⏳ Analyzing...';
 
             try {
-                const response = await fetch('http://localhost:5000/check', {
+                const response = await fetch('http://localhost:5000/api/xss/check', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 'Content-Type': 'application/json' , "X-API-Key": 'sk-mK7_UMsf3jhvDofaqXjIRVLeTtPJ_1M1Sewfe-gzotU' },
                     body: JSON.stringify({ input: input })
                 }).catch(() => null);
 

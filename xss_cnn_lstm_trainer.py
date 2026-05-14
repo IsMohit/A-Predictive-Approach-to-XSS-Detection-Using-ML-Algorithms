@@ -39,7 +39,7 @@ class XSSCNNLSTMDetector:
     def __init__(self):
         self.model = None
         self.tokenizer = None
-        self.max_length = 300  
+        self.max_length = 600  
         self.vocab_size = 5000 
         
     def preprocess_text(self, text):
@@ -93,7 +93,7 @@ class XSSCNNLSTMDetector:
             sequences,
             maxlen=self.max_length,
             padding='post',
-            truncating='post'
+            truncating='pre'
         )
         
         return padded_sequences
@@ -368,7 +368,7 @@ if __name__ == "__main__":
     
     try:
         # df = detector.load_and_prepare_data('xss_dataset.csv')
-        df = detector.load_and_prepare_data('Xss_SafeInput_Dataset.csv')
+        df = detector.load_and_prepare_data('Xss_SafeInput_Dataset_augmented.csv')
     except FileNotFoundError:
         print("\nError: Dataset file 'xss_dataset.csv' not found!")
         print("Please run generate_dataset.py first!")
@@ -382,6 +382,7 @@ if __name__ == "__main__":
     )
     
     detector.save_model()
+    clear
     
     test_samples = [
         "<script>alert('XSS')</script>",
