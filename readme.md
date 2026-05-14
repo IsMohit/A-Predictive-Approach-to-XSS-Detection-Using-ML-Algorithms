@@ -158,16 +158,11 @@ pip install -r requirements_cnn_lstm.txt
 # 1. Activate virtual environment
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 
-# 2. Generate training dataset
-python generate_dataset.py
 
-# 3. Validate dataset
-python validate_dataset.py
-
-# 4. Train the model (takes 3-5 minutes)
+# 2. Train the model (takes 3-5 minutes)
 python xss_cnn_lstm_trainer.py
 
-# 5. Start the API server
+# 3. Start the API server
 python app_cnn_lstm.py
 
 # 6. Open the web interface
@@ -178,17 +173,8 @@ The API will be available at `http://localhost:5000`
 
 ## 🎓 Training the Model
 
-### Option 1: Using Generated Dataset
 
-```bash
-# Generate a balanced dataset (2000 samples)
-python generate_dataset.py
-```
-
-This creates `Xss_SafeInput_Dataset.csv` with:
-- 15k+ malicious inputs (XSS payloads, obfuscated attacks) & safe inputs (normal text, URLs, emails)
-
-### Option 2: Using Your Own Dataset
+### Option 1: Using Your Own Dataset
 
 **Required Format:** CSV with two columns: `input` and `label`
 
@@ -207,38 +193,6 @@ Welcome to our website,0
 python xss_cnn_lstm_trainer.py
 ```
 
-**Expected Output:**
-```
-🛡️  ML-Based XSS Detection - Improved CNN-LSTM Model
-================================================================================
-📂 Loading dataset...
-✅ Loaded 2000 samples
-   Safe samples: 1000
-   Malicious samples: 1000
-
-🤖 Training Improved CNN-LSTM Model...
-   Training samples: 1600
-   Testing samples: 400
-
-🚀 Starting training for 30 epochs...
-Epoch 1/30
-50/50 [==============================] - 15s 300ms/step
-...
-
-✨ Model Performance Metrics:
-   Test Accuracy:  0.9993 (99.93%)
-   Test Precision: 1.0000 (100.00%)
-   Test Recall:  0.9985 (99.85%)
-   Test F1-Score:  0.9993
-
-💾 Saving model...
-✅ Training Complete!
-```
-
-**Training Time:**
-- Small dataset (2K samples): 3-5 minutes
-- Medium dataset (10K samples): 15-20 minutes
-- Large dataset (50K samples): 1-2 hours
 
 **Output Files:**
 - `xss_cnn_lstm_model.h5` - Trained model (~80-100 MB)
