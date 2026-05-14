@@ -3,9 +3,9 @@ test
 Dataset
 admin_panel
 malicious_attempt.jsonl
+*.h5
+*.pkl
+*.jsonl
+
 test_failure_analysis.py
 test_model_metrics_v2.py
-xss_cnn_lstm_best.h5
-xss_cnn_lstm_model.h5
-xss_cnn_lstm_trainer.h5
-.gitignore
