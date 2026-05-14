@@ -565,11 +565,11 @@ advanced_malicious = [
 
 | Metric | Score | Details |
 |--------|-------|---------|
-| **Accuracy** | 99.93% | Overall correctness |
+| **Accuracy** | 98.46% | Overall correctness |
 | **Precision** | 100.00% | True positives / All positives |
-| **Recall** | 99.85% | True positives / All actual malicious |
-| **F1-Score** | 0.9993% | Harmonic mean of precision and recall |
-| **AUC** | 0.9996 | Area under ROC curve |
+| **Recall** | 97.84% | True positives / All actual malicious |
+| **F1-Score** | 0.9891 | Harmonic mean of precision and recall |
+| **AUC** | 0.9964 | Area under ROC curve |
 
 ## 🔧 Troubleshooting
 
@@ -682,7 +682,6 @@ This project is currently under active development. Contributions are welcome!
 **Project Maintainer:** Mohit
 
 - GitHub: [@IsMohit](https://github.com/IsMohit)
-- Email: your.email@example.com
 - Project Link: [https://github.com/IsMohit/A-Predictive-Approach-to-XSS-Detection-Using-ML-Algorithms](https://github.com/IsMohit/A-Predictive-Approach-to-XSS-Detection-Using-ML-Algorithms)
 
 ---
